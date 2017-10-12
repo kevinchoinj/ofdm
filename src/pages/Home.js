@@ -52,9 +52,6 @@ componentDidMount(){
             </div>
           </Article>
           </Col>
-          <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          Important Dates
-          </Col>
         </Row>
         <Row>
           <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
@@ -68,9 +65,7 @@ componentDidMount(){
             </div>
           </Article>
           </Col>
-          <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          Important Dates
-          </Col>
+
         </Row>
        
       </div>
