@@ -62,6 +62,13 @@ class App extends Component {
       lastscroll: this.state.thisscroll,
     });
   }
+  /*if smaller than 982px, set to default height*/
+  else{
+    this.setState({
+      menuheight:"80px",
+      offset:"0px",
+    });
+  }
   }
 
   render() {

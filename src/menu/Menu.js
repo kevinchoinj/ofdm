@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 
 import Mobilebutton from './Mobilebutton';
 import Menuopt from './Menuoption';
+import Mobilepanel from './Mobilepanel';
 
 export default class Menu extends React.Component{
   constructor(props){
@@ -17,6 +18,8 @@ export default class Menu extends React.Component{
       lineanim3: "14px",
       line1fromtop: "29px",
       line2fromtop: "38px",
+
+      mobileoffset:"-100vw",
     }
     this.checkscreen = this.checkscreen.bind(this);
 
@@ -51,6 +54,7 @@ export default class Menu extends React.Component{
          lineanim3: "0px",
          line1fromtop: "34px",
          line2fromtop: "34px",
+         mobileoffset:"0px",
       });
     }
     else if(this.state.lineanim3 ==="0px"){
@@ -60,6 +64,7 @@ export default class Menu extends React.Component{
          lineanim3: "14px",
          line1fromtop: "29px",
          line2fromtop: "38px",
+         mobileoffset:"-100vw",
       });
     }
   }
@@ -142,6 +147,8 @@ export default class Menu extends React.Component{
             
             display={this.state.displaymobile}
           />
+
+          <Mobilepanel mobileoffset={this.state.mobileoffset}/>
     </Row>
     </div>
     );

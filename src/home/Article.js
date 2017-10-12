@@ -9,6 +9,7 @@ export default class Article extends React.Component{
     const title={
       fontSize:"40px",
       fontWeight:"bold",
+      marginBottom:"25px",
 
     }
     const content={
