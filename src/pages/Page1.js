@@ -5,7 +5,6 @@ import {Row, Col} from 'react-bootstrap';
 export default class Page1 extends React.Component{
 
   componentDidMount(){
-    window.scrollTo(0, 0);
   }
 
   render(){

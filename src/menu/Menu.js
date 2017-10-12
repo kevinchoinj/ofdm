@@ -72,8 +72,18 @@ export default class Menu extends React.Component{
   }
 
   gotop(){
-    window.scrollTo(0, 0);
-  }
+    
+    var scrollStep = -window.scrollY / (500 / 15),
+    
+    scrollInterval = setInterval(function(){
+    if ( window.scrollY != 0 ) {
+        window.scrollBy( 0, scrollStep );
+    }
+    else clearInterval(scrollInterval); 
+},15);
+console.log(scrollStep);
+}
+
   render(){
     const menucontainer={
       position:"fixed",
