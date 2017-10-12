@@ -100,7 +100,9 @@ nothoverbutton(){
 			WebkitTransition: ".25s ease-out",
 			MozTransition: ".25s ease-out",
 			OTransition: ".25s ease-out",
-			transition:".25s ease-out",
+      transition:".25s ease-out",
+      
+      
 		}
 
 	  return(

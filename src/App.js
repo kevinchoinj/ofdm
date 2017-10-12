@@ -3,9 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import {Switch, Route} from 'react-router-dom';
 
-import Home from './pages/Home';
 import Menu from './menu/Menu';
 import Footer from './components/Footer';
+
+import Home from './pages/Home';
+import Page1 from './pages/Page1';
 
 class App extends Component {
   constructor(props) {
@@ -70,6 +72,7 @@ class App extends Component {
 
       <Switch>
       <Route exact path="/" component={Home}/>
+      <Route exact path="/page1" component={Page1}/>
       </Switch>
 
       <Footer/>

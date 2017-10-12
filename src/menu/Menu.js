@@ -1,7 +1,9 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
-import Mobilebutton from './Mobilebutton';
 import {Link} from 'react-router-dom';
+
+import Mobilebutton from './Mobilebutton';
+import Menuopt from './Menuoption';
 
 export default class Menu extends React.Component{
   constructor(props){
@@ -90,18 +92,22 @@ export default class Menu extends React.Component{
       OTransition: ".5s ease-out",
       transition:".5s ease-out",
 
+      color:"#1a1a1a",
+
     }
     const menuoption={
       display: this.state.displaywide,
       textAlign:"center",
       marginTop:"30px",
-      fontSize:"14px",
+      fontSize:"16px",
 
       top:this.props.offset,
       WebkitTransition: ".5s ease-out",
       MozTransition: ".5s ease-out",
       OTransition: ".5s ease-out",
       transition:".5s ease-out",
+
+      fontWeight:"bold",
 
     }
 
@@ -111,12 +117,12 @@ export default class Menu extends React.Component{
     <Row>
       <Col md={10} mdOffset={1} sm={12} smOffset={0} xs={12} xsOffset={0} style={menucontainer}>
         <Row>
-        <Col md={3} mdOffset={0} smOffset={1} xsOffset={1} style={title}>TITLE</Col>
+        <Link to='/'><Col md={3} mdOffset={0} smOffset={1} xsOffset={1} style={title}><Menuopt>TITLE</Menuopt></Col></Link>
         <Col md={9} sm={9} xs={9}>
-          <Col md={3} style={menuoption}>Option1</Col>
-          <Col md={3} style={menuoption}>Option2</Col>
-          <Col md={3} style={menuoption}>Option3</Col>
-          <Col md={3} style={menuoption}>Option4</Col>
+          <Link to='/page1'><Col md={3} style={menuoption}><Menuopt>Option1</Menuopt></Col></Link>
+          <Col md={3} style={menuoption}><Menuopt>Option2</Menuopt></Col>
+          <Col md={3} style={menuoption}><Menuopt>Option3</Menuopt></Col>
+          <Col md={3} style={menuoption}><Menuopt>Option4</Menuopt></Col>
         </Col>
 
 
