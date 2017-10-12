@@ -23,7 +23,9 @@ export default class Menu extends React.Component{
     }
     this.checkscreen = this.checkscreen.bind(this);
 
-    this.togglemenu = this.togglemenu.bind(this)
+    this.togglemenu = this.togglemenu.bind(this);
+
+    this.gotop = this.gotop.bind(this);
   }
 
   componentDidMount(){
@@ -69,6 +71,9 @@ export default class Menu extends React.Component{
     }
   }
 
+  gotop(){
+    window.scrollTo(0, 0);
+  }
   render(){
     const menucontainer={
       position:"fixed",
@@ -125,12 +130,12 @@ export default class Menu extends React.Component{
     <Row>
       <Col md={10} mdOffset={1} sm={12} smOffset={0} xs={12} xsOffset={0} style={menucontainer}>
         <Row>
-        <Link to='/'><Col md={3} mdOffset={0} smOffset={1} xsOffset={1} style={title}><Menuopt>TITLE</Menuopt></Col></Link>
+        <Link to='/'><Col md={3} mdOffset={0} smOffset={1} xsOffset={1} style={title} onClick={this.gotop}><Menuopt>TITLE</Menuopt></Col></Link>
         <Col md={9} sm={9} xs={9}>
-          <Link to='/page1'><Col md={3} style={menuoption}><Menuopt>Option1</Menuopt></Col></Link>
-          <Col md={3} style={menuoption}><Menuopt>Option2</Menuopt></Col>
-          <Col md={3} style={menuoption}><Menuopt>Option3</Menuopt></Col>
-          <Col md={3} style={menuoption}><Menuopt>Option4</Menuopt></Col>
+          <Link to='/page1'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt>Option1</Menuopt></Col></Link>
+          <Col md={3} style={menuoption} onClick={this.gotop}><Menuopt>Option2</Menuopt></Col>
+          <Col md={3} style={menuoption} onClick={this.gotop}><Menuopt>Option3</Menuopt></Col>
+          <Col md={3} style={menuoption} onClick={this.gotop}><Menuopt>Option4</Menuopt></Col>
         </Col>
 
 
