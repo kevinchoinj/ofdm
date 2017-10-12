@@ -72,13 +72,22 @@ class App extends Component {
   }
 
   render() {
+    
     return (
       <div className="App">
 
       <Menu menuheight={this.state.menuheight} offset={this.state.offset}/>
+      <Route exact path={"/"} children={({ match }) => (
+		      <div>
+		        <Home
+              opac={ Boolean(match) ? '1': '0'}
+              pointerevents={ Boolean(match) ? 'auto': 'none'}
+		        />
+		      </div>
+		    )}/>
+
 
       <Switch>
-      <Route exact path="/" component={Home}/>
       <Route exact path="/page1" component={Page1}/>
       </Switch>
 

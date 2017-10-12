@@ -85,6 +85,8 @@ export default class Menu extends React.Component{
       backgroundColor:"#fff",
 
       color:"#1a1a1a",
+      fontFamily:"Roboto, Helvetica",
+      zIndex:"4",
     }
     const title={
       textAlign:"center",
@@ -98,6 +100,7 @@ export default class Menu extends React.Component{
       transition:".5s ease-out",
 
       color:"#1a1a1a",
+      fontFamily:"Roboto, Helvetica",
 
     }
     const menuoption={

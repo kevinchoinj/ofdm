@@ -10,9 +10,11 @@ export default class Article extends React.Component{
       fontSize:"40px",
       fontWeight:"bold",
       marginBottom:"25px",
+      fontFamily:"Roboto, Helvetica",
 
     }
     const content={
+      fontFamily:"Helvetica",
 
     }
     return(

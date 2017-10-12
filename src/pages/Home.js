@@ -10,8 +10,16 @@ export default class Home extends React.Component{
 
 
   render(){
+    const container={
+      WebkitTransition: ".5s ease-out",
+      MozTransition: ".5s ease-out",
+      OTransition: ".5s ease-out",
+      transition:".5s ease-out",
+      opacity: this.props.opac,
+      pointerEvents:this.props.pointerevents,
+    }
     return(
-      <div>
+      <div style={container}>
         <Row>
           <Banner bgimage={image1}/>
         </Row>

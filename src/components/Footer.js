@@ -12,7 +12,8 @@ export default class Footer extends React.Component{
       left:"0px",
       right:"0px",
       backgroundColor:"#1a1a1a",
-
+      fontFamily:"Roboto, Helvetica",
+      
       color:"hsla(0,0%,100%,.7)"
     }
 
