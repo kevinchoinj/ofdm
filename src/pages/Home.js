@@ -7,6 +7,8 @@ import image1 from '../images/science.jpg';
 import {Row, Col} from 'react-bootstrap';
 
 export default class Home extends React.Component{
+
+
   render(){
     return(
       <div>

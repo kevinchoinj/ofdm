@@ -27,7 +27,6 @@ export default class Menu extends React.Component{
   }
 
   checkscreen(){
-    console.log(window.innerWidth);
     if (window.innerWidth > 992){
       this.setState({
         displaywide:"block",
@@ -66,7 +65,13 @@ export default class Menu extends React.Component{
   render(){
     const menucontainer={
       position:"fixed",
-      height:"80px",
+
+      height:this.props.menuheight,
+      WebkitTransition: ".5s ease-out",
+      MozTransition: ".5s ease-out",
+      OTransition: ".5s ease-out",
+      transition:".5s ease-out",
+
       WebkitBoxShadow: "0 2px 5px rgba(0,0,0,.4)",
 			MozBoxShadow: "0 2px 5px rgba(0,0,0,.4))",
       BoxShadow: "0 2px 5px rgba(0,0,0,.4)",
@@ -76,14 +81,28 @@ export default class Menu extends React.Component{
     }
     const title={
       textAlign:"center",
-      top:"25px",
+      marginTop:"25px",
       fontSize:"24px",
+
+      top:this.props.offset,
+      WebkitTransition: ".5s ease-out",
+      MozTransition: ".5s ease-out",
+      OTransition: ".5s ease-out",
+      transition:".5s ease-out",
+
     }
     const menuoption={
       display: this.state.displaywide,
       textAlign:"center",
-      top:"30px",
+      marginTop:"30px",
       fontSize:"14px",
+
+      top:this.props.offset,
+      WebkitTransition: ".5s ease-out",
+      MozTransition: ".5s ease-out",
+      OTransition: ".5s ease-out",
+      transition:".5s ease-out",
+
     }
 
     return(

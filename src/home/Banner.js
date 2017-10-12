@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Home extends React.Component{
+export default class Banner extends React.Component{
   render(){
     const banner={
       width:"100%",
