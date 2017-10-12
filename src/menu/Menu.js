@@ -1,6 +1,7 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 import Mobilebutton from './Mobilebutton';
+import {Link} from 'react-router-dom';
 
 export default class Menu extends React.Component{
   constructor(props){
@@ -66,9 +67,10 @@ export default class Menu extends React.Component{
     const menucontainer={
       position:"fixed",
       height:"80px",
-      WebkitBoxShadow: "0 2px 5px rgba(0,0,0,.2)",
-			MozBoxShadow: "0 2px 5px rgba(0,0,0,.2))",
-      BoxShadow: "0 2px 5px rgba(0,0,0,.2)",
+      WebkitBoxShadow: "0 2px 5px rgba(0,0,0,.4)",
+			MozBoxShadow: "0 2px 5px rgba(0,0,0,.4))",
+      BoxShadow: "0 2px 5px rgba(0,0,0,.4)",
+      backgroundColor:"#fff",
 
       color:"#1a1a1a",
     }
@@ -83,8 +85,10 @@ export default class Menu extends React.Component{
       top:"30px",
       fontSize:"14px",
     }
+
     return(
       <div>
+        
     <Row>
       <Col md={10} mdOffset={1} sm={12} smOffset={0} xs={12} xsOffset={0} style={menucontainer}>
         <Row>
