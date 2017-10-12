@@ -73,21 +73,36 @@ export default class Menu extends React.Component{
       color:"#1a1a1a",
     }
     const title={
-      position:"absolute",
       textAlign:"center",
-
       top:"25px",
       fontSize:"24px",
+    }
+    const menuoption={
+      display: this.state.displaywide,
+      textAlign:"center",
+      top:"30px",
+      fontSize:"14px",
     }
     return(
       <div>
     <Row>
       <Col md={10} mdOffset={1} sm={12} smOffset={0} xs={12} xsOffset={0} style={menucontainer}>
+        <Row>
         <Col md={3} mdOffset={0} smOffset={1} xsOffset={1} style={title}>TITLE</Col>
-        <Col md={8} sm={9} xs={9}></Col>
+        <Col md={9} sm={9} xs={9}>
+          <Col md={3} style={menuoption}>Option1</Col>
+          <Col md={3} style={menuoption}>Option2</Col>
+          <Col md={3} style={menuoption}>Option3</Col>
+          <Col md={3} style={menuoption}>Option4</Col>
+        </Col>
+
+
         <Col md={1} sm={1} xs={1}>
-        
-        <Mobilebutton
+      
+        </Col>
+        </Row>
+      </Col>
+      <Mobilebutton
 						toggler={this.togglemenu}
 
 						line1rot={this.state.lineanim1}
@@ -98,9 +113,6 @@ export default class Menu extends React.Component{
             
             display={this.state.displaymobile}
           />
-            </Col>
-
-      </Col>
     </Row>
     </div>
     );
