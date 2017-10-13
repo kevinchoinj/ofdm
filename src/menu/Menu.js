@@ -83,7 +83,6 @@ export default class Menu extends React.Component{
     }
     else clearInterval(scrollInterval); 
 },15);
-console.log(scrollStep);
 }
 
   render(){
@@ -106,7 +105,7 @@ console.log(scrollStep);
       zIndex:"4",
     }
     const title={
-      textAlign:"center",
+      textAlign:"left",
 
       top:this.props.offset,
       WebkitTransition: ".5s ease-out",
@@ -145,7 +144,7 @@ console.log(scrollStep);
     <Row>
       <Col md={10} mdOffset={1} sm={12} smOffset={0} xs={12} xsOffset={0} style={menucontainer}>
         <Row>
-        <Link to='/'><Col md={3} mdOffset={0} smOffset={1} xsOffset={1} style={title} onClick={this.gotop}><img src={logoimage} style={logostyle}/></Col></Link>
+        <Link to='/'><Col md={3} mdOffset={0} sm={3} smOffset={0} xs={12} xsOffset={0} style={title} onClick={this.gotop}><img src={logoimage} style={logostyle}/></Col></Link>
         <Col md={9} sm={9} xs={9}>
           <Link to='/'><Col md={4} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px">Home</Menuopt></Col></Link>
           <Link to='/schedule'><Col md={4} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px">Schedule</Menuopt></Col></Link>

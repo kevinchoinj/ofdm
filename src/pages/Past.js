@@ -82,11 +82,36 @@ export default class Past extends React.Component{
 
           <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
           <Yearsect year="2013">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br/><br/>
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br/><br/>
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in  <br/><br/>
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <br/><br/>
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/><br/>
+          Semi-analytical investigation of vortex shedding within the glottis an concomitant effect on vocal fold dynamics<br/> 
+          Brian Kettlewell<br/>
+          Advisor: Dr. Sean Peterson<br/><br/>
+            
+          Investigating the impact of external leg compression on venous return to the heart <br/>
+          Jennifer Book<br/>
+          Advisor: Dr. Sean Peterson<br/><br/>
+          
+          Modelling and experiment of dying process of catalyst ink droplet <br/>
+          Jingyi Wang<br/>
+          Advisor: Dr. Xianguo Li<br/><br/>
+          
+          Optimum viscous flow in pressure-swirl atomizers <br/>
+          Ghobad Amini<br/><br/>
+          
+          Tomographic PIV measurements in the wakes of cylindrical bodies <br/>
+          Chris Morton<br/>
+          Advisor: Dr. Serhiy Yarusevych<br/><br/>
+          
+          Use of HD Video to investigate stall on a wind turbine <br/>
+          Nigel Swytink-Binnema<br/>
+          Advisor: Dr. David Johnson<br/><br/>
+          
+          A flow visualization study of flow through a cluster of three equispaced cylinders at various orientation angles <br/>
+          Manpreet Bansal<br/>
+          Advisor: Dr. Serhiy Yarusevych<br/><br/>
+          
+          A Jacobian-free Newton-Krylov method applied to multi-phase flows <br/>
+          Amirali Ashrafizadeh <br/>
+          Advisor: Dr. Cecile Devaud<br/><br/>
         </Yearsect>
           </Col>
 
@@ -105,11 +130,45 @@ export default class Past extends React.Component{
 
           <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
           <Yearsect year="2012">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br/><br/>
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br/><br/>
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in  <br/><br/>
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <br/><br/>
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/><br/>
+          Developing a reliable method of estimating drag from far field measurements <br/>
+          Holly Neatby<br/>
+          Advisor: Prof. Serhiy Yarusevych<br/><br/>
+            
+          Experimental measurement of wind turbine performance through blade element theory <br/>
+          Ahmed Abdelrahman<br/>
+          Advisor: Prof. David Johnson<br/><br/>
+          
+          A CFD study of steady flow of a Newtonian and non-Newtonian fluid through a mildly curved tube with stent-like wall protrusions patterns <br/>
+          Chekema Prince<br/>
+          Advisor: Prof. Sean Peterson<br/><br/>
+          
+          A coupled experimental-numerical framework for fluid-structure interaction studies: towards a pseudo-self-oscillating vocal fold facility <br/>
+          David Sommer<br/>
+          Advisor: Prof. Sean Peterson<br/><br/>
+          
+          RANS simulation of a confined turbulent jet diffusion flame using conditional source estimation <br/>
+          Jeff Labahn<br/>
+          Advisor: Prof. Cecile Devaud<br/><br/>
+          
+          Turbulent non-premixed combustion modeling using conditional moment closure including the effects of differential diffusion <br/>
+          Dominic Man Ching Ma<br/>
+          Advisor: Prof. Cecile Devaud<br/><br/>
+          
+          Transient heat transfer effects in low-fluence Laser Induced Incandescence <br/>
+          Farzan Memarian<br/>
+          Advisor: Prof. Kyle Daun<br/><br/>
+          
+          Implementation of the lattice Boltzmann method on the graphics processing unit <br/>
+          Yusuke Koda<br/>
+          Advisor: Prof. Fue Sang Lien<br/><br/>
+          
+          Indoor airborne nanoparticle measurement by Diffusive Charging (DC) and Aerodynamic Particle Focusing (APF): Characterization of the performance of the corona charger <br/>
+          Raheleh Givehchi<br/>
+          Advisor: Prof. Zhongchao Tan<br/><br/>
+          
+          Extraction of 5-HMF using mixed solvents from simulated hydrothermal conversion product <br/>
+          Fang Liu<br/>
+          Advisor: Prof. Zhongchao Tan<br/><br/>
         </Yearsect>
           </Col>
 
@@ -129,11 +188,53 @@ export default class Past extends React.Component{
 
           <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
           <Yearsect year="2011">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br/><br/>
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br/><br/>
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in  <br/><br/>
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <br/><br/>
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/><br/>
+          Unsteady Flow Investigation around a Pitching Wind Turbine Blade <br/>
+          Kobra Gharali<br/>
+          Advisor: Dr. David Johnson<br/><br/>
+          
+          Experimental study of vortex dynamics in the wake of a dual step cylinder <br/>
+          Chris Morton<br/>
+          Advisor: Dr. Serhiy Yarusevych<br/><br/>
+            
+          A numerical study of steady flow through a curved tube with wavy walls <br/>
+          Chekema Prince<br/>
+          Advisor: Dr. Sean Peterson<br/><br/>
+          
+          Irregular Vocal Fold Dynamics Incited by Asymmetric Fluid Loading in a Model of Recurrent Laryngeal Nerve Paralysis <br/>
+          David Sommer<br/>
+          Advisor: Dr. Sean Peterson<br/><br/>
+          
+          Simulation of a turbulent premixed methane-air flame <br/>
+          Daniele Dovizio<br/>
+          Advisor: Dr. Cecile Devaud<br/><br/>
+          
+          Fire Testing Standards for Transportation Applications: A Global Comparison <br/>
+          Brenda Prine<br/>
+          Advisor:  E.J. Weckman<br/><br/>
+          
+          Droplet Sorting at a T-junction under Asymmetric Geometries and Flow Conditions <br/>
+          Tom Glawdel and Caglar Elbuken<br/>
+          Advisor: Carolyn L. Ren<br/><br/>
+          
+          Rarefaction effects on the catalytic oxidation of hydrogen in microchannels <br/>
+          Azad Qazi Zade<br/>
+          Advisor: Dr. Metin Renksizbulut<br/><br/>
+          
+          Molecular Simulation of Chemically Reacting Flows in Microchannels and Nanochannels <br/>
+          Amir Ahmadzadegan<br/>
+          Advisor: Dr. Metin Renksizbulut and Dr. John Wen<br/><br/>
+          
+          Measurements and flow pattern visualizations of two-phase flow boiling in single channel microevaporators <br/>
+          Elmer Galvis<br/>
+          Advisor: Dr. Richard Culham<br/><br/>
+          
+          Removal of nitric oxide from flue gas in a spray tower <br/>
+          Hesheng Yu<br/>
+          Advisor: Zhongchao Tan<br/><br/>
+          
+          Hydrothermal conversion of biomass into value-add chemical 5-HMF <br/>
+          Fang Liu<br/>
+          Advisor: Zhongchao Tan<br/><br/>
         </Yearsect>
           </Col>
 

@@ -30,6 +30,11 @@ export default class Banner extends React.Component{
       width:"100%",
       fontWeight:"bold",
       fontFamily:"Roboto, Helvetica",
+
+      WebkitTransition: ".5s ease-out",
+      MozTransition: ".5s ease-out",
+      OTransition: ".5s ease-out",
+      transition:".5s ease-out",
     }
     return(
       <div>
