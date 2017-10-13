@@ -6,6 +6,8 @@ import Mobilebutton from './Mobilebutton';
 import Menuopt from './Menuoption';
 import Mobilepanel from './Mobilepanel';
 
+import logoimage from '../images/uwlogo.png';
+
 export default class Menu extends React.Component{
   constructor(props){
     super(props);
@@ -105,8 +107,7 @@ console.log(scrollStep);
     }
     const title={
       textAlign:"center",
-      marginTop:"25px",
-      fontSize:"24px",
+      marginTop:"-8px",
 
       top:this.props.offset,
       WebkitTransition: ".5s ease-out",
@@ -134,18 +135,21 @@ console.log(scrollStep);
 
     }
 
+    const logostyle={
+      maxWidth:"100%",
+    }
+
     return(
       <div>
         
     <Row>
       <Col md={10} mdOffset={1} sm={12} smOffset={0} xs={12} xsOffset={0} style={menucontainer}>
         <Row>
-        <Link to='/'><Col md={3} mdOffset={0} smOffset={1} xsOffset={1} style={title} onClick={this.gotop}><Menuopt underwidth="80px">TITLE</Menuopt></Col></Link>
+        <Link to='/'><Col md={3} mdOffset={0} smOffset={1} xsOffset={1} style={title} onClick={this.gotop}><img src={logoimage} style={logostyle}/></Col></Link>
         <Col md={9} sm={9} xs={9}>
-          <Link to='/page1'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px">Option1</Menuopt></Col></Link>
-          <Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px">Option2</Menuopt></Col>
-          <Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px">Option3</Menuopt></Col>
-          <Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px">Option4</Menuopt></Col>
+          <Link to='/page1'><Col md={4} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px">Home</Menuopt></Col></Link>
+          <Col md={4} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px">Schedule</Menuopt></Col>
+          <Link to='/past'><Col md={4} style={menuoption} onClick={this.gotop}><Menuopt underwidth="100px">Past Seminars</Menuopt></Col></Link>
         </Col>
 
 

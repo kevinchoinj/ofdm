@@ -13,6 +13,7 @@ import image2 from './images/science2.jpg';
 
 import Home from './pages/Home';
 import Page1 from './pages/Page1';
+import Past from './pages/Past';
 
 class App extends Component {
   constructor(props) {
@@ -83,7 +84,7 @@ class App extends Component {
       width:"100%",
       marginBottom:"50px",
     }
-    
+
     return (
       <div className="App">
 
@@ -110,9 +111,20 @@ class App extends Component {
 		      </div>
 		    )}/>
 
+      <Route exact path={"/past"} children={({ match }) => (
+		      <div>
+		        <Banner
+              opac={ Boolean(match) ? '1': '0'}
+              pointerevents={ Boolean(match) ? 'auto': 'none'}
+              bgimage={image2}
+		        />
+		      </div>
+		    )}/>
+
       <Switch>
       <Route exact path="/" component={Home}/>
       <Route exact path="/page1" component={Page1}/>
+      <Route exact path="/past" component={Past}/>
       </Switch>
         <Footer/>
       </div>
