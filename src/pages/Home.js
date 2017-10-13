@@ -27,7 +27,7 @@ componentDidMount(){
           <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
           <Article>
           <div style={title}>
-            2017 Meeting
+            2017
             </div>
 
             <div style={content}>
@@ -53,16 +53,16 @@ componentDidMount(){
           </Col>
 
         <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          Important Deadlines<br/><br/>
+          <strong>Important Deadlines</strong><br/><br/>
  
-            Abstract Submission: 
+          <strong>Abstract Submission: </strong>
             October 9th, 2015<br/>
-            Meeting Date: 
+            <strong>Meeting Date: </strong>
             October 28th, 2015<br/>
-            Meeting Location: 
-            E5-2004<br/>
-            Please submit all information and questions to: 
-            Jeffrey McClure, jejmcclu@uwaterloo.ca<br/>
+            <strong>Meeting Location:</strong> 
+            E5-2004<br/><br/>
+            <strong>Please submit all information and questions to: 
+            Jeffrey McClure, jejmcclu@uwaterloo.ca</strong><br/>
           </Col>
           
         </Row>

@@ -15,6 +15,7 @@ import image3 from './images/uwloo3.jpg';
 import Home from './pages/Home';
 import Schedule from './pages/Page1';
 import Past from './pages/Past';
+import Keynotes from './pages/Keynotes';
 
 class App extends Component {
   constructor(props) {
@@ -122,10 +123,21 @@ class App extends Component {
 		      </div>
 		    )}/>
 
+        <Route exact path={"/keynotes"} children={({ match }) => (
+		      <div>
+		        <Banner
+              opac={ Boolean(match) ? '1': '0'}
+              pointerevents={ Boolean(match) ? 'auto': 'none'}
+              bgimage={image3}
+		        >Keynotes</Banner>
+		      </div>
+		    )}/>
+
       <Switch>
       <Route exact path="/" component={Home}/>
       <Route exact path="/schedule" component={Schedule}/>
       <Route exact path="/past" component={Past}/>
+      <Route exact path="/keynotes" component={Keynotes}/>
       </Switch>
         <Footer/>
       </div>

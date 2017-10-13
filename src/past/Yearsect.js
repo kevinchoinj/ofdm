@@ -65,6 +65,10 @@ export default class Yearsect extends React.Component{
     const sideinfo={
       maxHeight: this.state.maxheight,
       overflow:"hidden",
+      WebkitTransition: ".5s ease-in",
+			MozTransition: ".5s ease-in",
+			OTransition: ".5s ease-in",
+      transition:".5s ease-in",
     }
 	  return(
 
