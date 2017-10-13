@@ -8,8 +8,8 @@ import Footer from './components/Footer';
 
 
 import Banner from './home/Banner';
-import image1 from './images/uwloo1.jpg';
-import image2 from './images/uwloo2.jpg';
+import image1 from './images/uwloo2.jpg';
+import image2 from './images/uwloo1.jpg';
 import image3 from './images/uwloo3.jpg';
 
 import Home from './pages/Home';
