@@ -29,10 +29,7 @@ leave(){
   render(){
     const option={
       color:this.state.color,
-      WebkitTransition: ".5s ease-out",
-      MozTransition: ".5s ease-out",
-      OTransition: ".5s ease-out",
-      transition:".5s ease-out",
+
 
     }
 
