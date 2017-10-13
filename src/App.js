@@ -8,11 +8,12 @@ import Footer from './components/Footer';
 
 
 import Banner from './home/Banner';
-import image1 from './images/science.jpg';
-import image2 from './images/science2.jpg';
+import image1 from './images/uwloo1.jpg';
+import image2 from './images/uwloo2.jpg';
+import image3 from './images/uwloo3.jpg';
 
 import Home from './pages/Home';
-import Page1 from './pages/Page1';
+import Schedule from './pages/Page1';
 import Past from './pages/Past';
 
 class App extends Component {
@@ -101,7 +102,7 @@ class App extends Component {
 		        />
 		      </div>
 		    )}/>
-      <Route exact path={"/page1"} children={({ match }) => (
+      <Route exact path={"/schedule"} children={({ match }) => (
 		      <div>
 		        <Banner
               opac={ Boolean(match) ? '1': '0'}
@@ -116,14 +117,14 @@ class App extends Component {
 		        <Banner
               opac={ Boolean(match) ? '1': '0'}
               pointerevents={ Boolean(match) ? 'auto': 'none'}
-              bgimage={image2}
+              bgimage={image3}
 		        />
 		      </div>
 		    )}/>
 
       <Switch>
       <Route exact path="/" component={Home}/>
-      <Route exact path="/page1" component={Page1}/>
+      <Route exact path="/schedule" component={Schedule}/>
       <Route exact path="/past" component={Past}/>
       </Switch>
         <Footer/>

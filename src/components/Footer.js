@@ -30,11 +30,10 @@ export default class Footer extends React.Component{
     <Row>
       <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
       <div style={title}>
-      Contact Us
+      Contact for more information
       </div>
       <div style={info}>
-      example@example.com<br/>
-      +12345678
+      jejmcclu@uwaterloo.ca<br/>
       </div>
       </Col>
     </Row>

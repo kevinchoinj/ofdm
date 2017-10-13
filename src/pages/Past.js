@@ -34,7 +34,14 @@ export default class Past extends React.Component{
           </Col>
 
           <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          Seminar Info
+          2015<br/>
+          Seminar Info<br/>
+          Organizer: 
+          Jeffrey McClure<br/>
+          Date: 
+          October 28th, 2015<br/>
+          Place: 
+          E5-2004<br/>
           </Col>
 
 
@@ -49,7 +56,16 @@ export default class Past extends React.Component{
           </Col>
 
           <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          Seminar Info
+          2013<br/>
+          Seminar Info<br/>
+          Organizer: 
+          Chris Morton<br/>
+          Date: 
+          Thursday, October 23, 2013<br/>
+          Time: 
+          10:00am - 2:00pm<br/>
+          Place: 
+          E5-2004<br/>
           </Col>
 
           <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
@@ -63,7 +79,16 @@ export default class Past extends React.Component{
           </Col>
 
           <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          Seminar Info
+          2012<br/>
+          Seminar Info<br/>
+          Organizer:
+          Chris Morton<br/>
+          Date: 
+          Thursday, October 26, 2012<br/>
+          Time: 
+          10:00am - 2:00pm<br/>
+          Place: 
+          E5-2004<br/>
           </Col>
 
 
@@ -78,7 +103,16 @@ export default class Past extends React.Component{
           </Col>
 
           <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          Seminar Info
+          2011<br/>
+          Seminar Info<br/>
+          Organizer: 
+          Chris Morton<br/>
+          Date: 
+          Thursday, October 27, 2011<br/>
+          Time: 
+          10:00am - 2:00pm<br/>
+          Place: 
+          E5-2004<br/>
           </Col>
 
 

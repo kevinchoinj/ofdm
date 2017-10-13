@@ -107,7 +107,6 @@ console.log(scrollStep);
     }
     const title={
       textAlign:"center",
-      marginTop:"-8px",
 
       top:this.props.offset,
       WebkitTransition: ".5s ease-out",
@@ -137,6 +136,7 @@ console.log(scrollStep);
 
     const logostyle={
       maxWidth:"100%",
+      maxHeight:"80px",
     }
 
     return(
@@ -147,8 +147,8 @@ console.log(scrollStep);
         <Row>
         <Link to='/'><Col md={3} mdOffset={0} smOffset={1} xsOffset={1} style={title} onClick={this.gotop}><img src={logoimage} style={logostyle}/></Col></Link>
         <Col md={9} sm={9} xs={9}>
-          <Link to='/page1'><Col md={4} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px">Home</Menuopt></Col></Link>
-          <Col md={4} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px">Schedule</Menuopt></Col>
+          <Link to='/'><Col md={4} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px">Home</Menuopt></Col></Link>
+          <Link to='/schedule'><Col md={4} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px">Schedule</Menuopt></Col></Link>
           <Link to='/past'><Col md={4} style={menuoption} onClick={this.gotop}><Menuopt underwidth="100px">Past Seminars</Menuopt></Col></Link>
         </Col>
 
