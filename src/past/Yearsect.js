@@ -45,6 +45,7 @@ export default class Yearsect extends React.Component{
       fontSize:"40px",
       cursor:"pointer",
      position:"relative",
+     marginBottom:"25px",
     }
 
     const sub={
