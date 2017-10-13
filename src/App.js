@@ -81,7 +81,7 @@ class App extends Component {
   render() {
     
     const placeholder={
-      height:"70vh",
+      height:"100vh",
       width:"100%",
       marginBottom:"50px",
     }
@@ -99,7 +99,7 @@ class App extends Component {
               opac={ Boolean(match) ? '1': '0'}
               pointerevents={ Boolean(match) ? 'auto': 'none'}
               bgimage={image1}
-		        />
+		        >Thermo-Fluids Fall Meeting</Banner>
 		      </div>
 		    )}/>
       <Route exact path={"/schedule"} children={({ match }) => (
@@ -108,7 +108,7 @@ class App extends Component {
               opac={ Boolean(match) ? '1': '0'}
               pointerevents={ Boolean(match) ? 'auto': 'none'}
               bgimage={image2}
-		        />
+		        >Schedule</Banner>
 		      </div>
 		    )}/>
 
@@ -118,7 +118,7 @@ class App extends Component {
               opac={ Boolean(match) ? '1': '0'}
               pointerevents={ Boolean(match) ? 'auto': 'none'}
               bgimage={image3}
-		        />
+		        >Past Years</Banner>
 		      </div>
 		    )}/>
 

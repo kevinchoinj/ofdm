@@ -27,7 +27,7 @@ componentDidMount(){
           <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
           <Article>
           <div style={title}>
-            Thermo-Fluids Fall Meeting
+            2017 Meeting
             </div>
 
             <div style={content}>

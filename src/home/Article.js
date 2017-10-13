@@ -3,9 +3,10 @@ import React from 'react';
 export default class Article extends React.Component{
   render(){
     const container={
-      fontFamily:"Helvetica",
+      fontFamily:"Roboto, Helvetica",
       position:"relative",
       marginBottom:"25px",
+      letterspacing:"1px",
       
     }
     return(
