@@ -55,12 +55,19 @@ export default class Past extends React.Component{
     const dl={
       fontWeight:"bold",
     }
-    
+    const seminarinfo={
+      
+    }
     return(
       <div>
-        <Row>
-          <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          <Yearsect year="2015">
+          
+          <Yearsect 
+          year="2015"
+          organizer="Jeff McClure"
+          date="Wednesday, October 28, 2015"
+          time="9:30am - 2:30pm"
+          place="E5-2004"
+          >
           <a href={HuangruiMo2015} download style={dl}>A ghost-cell immersed boundary method for complex and dynamic shock-particle interactions</a> <br/>
           Huangrui Mo<br/>
           Advisor: Prof. Fue-Sang Lien <br/><br/>
@@ -100,24 +107,12 @@ export default class Past extends React.Component{
 
 
         </Yearsect>
-          </Col>
 
-          <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          2015<br/>
-          Seminar Info<br/>
-          Organizer: 
-          Jeffrey McClure<br/>
-          Date: 
-          October 28th, 2015<br/>
-          Time:
-          9:30am - 2:30pm<br/>
-          Place: 
-          E5-2004<br/>
-          </Col>
-
-
-          <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          <Yearsect year="2013">
+          <Yearsect year="2013"
+          organizer="Chris Morton"
+          date="Thursday, October 23, 2013"
+          time="10:00am - 2:00pm"
+          place="E5-2004">
           <a href={BrianKettlewell2013} download style={dl}>Semi-analytical investigation of vortex shedding within the glottis an concomitant effect on vocal fold dynamics</a><br/> 
           Brian Kettlewell<br/>
           Advisor: Dr. Sean Peterson<br/><br/>
@@ -149,23 +144,12 @@ export default class Past extends React.Component{
           Amirali Ashrafizadeh <br/>
           Advisor: Dr. Cecile Devaud<br/><br/>
         </Yearsect>
-          </Col>
 
-          <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          2013<br/>
-          Seminar Info<br/>
-          Organizer: 
-          Chris Morton<br/>
-          Date: 
-          Thursday, October 23, 2013<br/>
-          Time: 
-          10:00am - 2:00pm<br/>
-          Place: 
-          E5-2004<br/>
-          </Col>
-
-          <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          <Yearsect year="2012">
+          <Yearsect year="2012"
+          organizer="Chris Morton"
+          date="Thursday, October 26, 2012"
+          time="10:00am - 2:00pm"
+          place="E5-2004">
           <a href={HollyNeatby2012} download style={dl}>Developing a reliable method of estimating drag from far field measurements</a> <br/>
           Holly Neatby<br/>
           Advisor: Prof. Serhiy Yarusevych<br/><br/>
@@ -209,24 +193,14 @@ export default class Past extends React.Component{
           Fang Liu<br/>
           Advisor: Prof. Zhongchao Tan<br/><br/>
         </Yearsect>
-          </Col>
 
-          <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          2012<br/>
-          Seminar Info<br/>
-          Organizer:
-          Chris Morton<br/>
-          Date: 
-          Thursday, October 26, 2012<br/>
-          Time: 
-          10:00am - 2:00pm<br/>
-          Place: 
-          E5-2004<br/>
-          </Col>
-
-
-          <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          <Yearsect year="2011">
+        
+          <Yearsect year="2011"
+          organizer="Chris Morton"
+          date="Thursday, October 27, 2011"
+          time="10:00am - 2:00pm"
+          place="E5-2004"
+          >
           Unsteady Flow Investigation around a Pitching Wind Turbine Blade <br/>
           Kobra Gharali<br/>
           Advisor: Dr. David Johnson<br/><br/>
@@ -275,23 +249,10 @@ export default class Past extends React.Component{
           Fang Liu<br/>
           Advisor: Zhongchao Tan<br/><br/>
         </Yearsect>
-          </Col>
 
-          <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          2011<br/>
-          Seminar Info<br/>
-          Organizer: 
-          Chris Morton<br/>
-          Date: 
-          Thursday, October 27, 2011<br/>
-          Time: 
-          10:00am - 2:00pm<br/>
-          Place: 
-          E5-2004<br/>
-          </Col>
+   
 
 
-        </Row>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import Expbutton from './Expbutton';
+import {Row, Col} from 'react-bootstrap';
 export default class Yearsect extends React.Component{
 
 	constructor(props) {
@@ -61,9 +62,15 @@ export default class Yearsect extends React.Component{
       transition:".5s ease-in",
 
     }
+    const sideinfo={
+      maxHeight: this.state.maxheight,
+      overflow:"hidden",
+    }
 	  return(
 
       <div>
+        <Row>
+        <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
         <div style={title} onClick={this.toggledisplay}> {this.props.year} 
         <Expbutton
 						toggler={this.toggledisplay}
@@ -82,8 +89,19 @@ export default class Yearsect extends React.Component{
       <div style={sub} ref="expand">
        {this.props.children}
         </div>
-
-
+      </Col>
+      <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={sideinfo}>
+          <strong>Seminar Info</strong><br/>
+          <strong>Organizer: </strong>
+          {this.props.organizer}<br/>
+          <strong> Date: </strong>
+          {this.props.date}<br/>
+          <strong>Time:</strong>
+          {this.props.time}<br/>
+          <strong>Place: </strong>
+          {this.props.place}<br/>
+      </Col>
+      </Row>
 
 
       </div>
