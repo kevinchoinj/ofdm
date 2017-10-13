@@ -5,7 +5,7 @@ export default class Yearsect extends React.Component{
 	constructor(props) {
 		super(props);
 		this.state = {
-      maxheight:"100vh",
+      maxheight:"0px",
 
       lineanim1: "rotate(45deg)",
       lineanim2: "rotate(-45deg)",
@@ -14,10 +14,24 @@ export default class Yearsect extends React.Component{
       line2fromtop: "34px",
     }
     this.toggledisplay = this.toggledisplay.bind(this);
-	}
+  }
+  
+  componentDidMount(){
+    this.toggledisplay();
+  }
 
   toggledisplay(){
-    if (this.state.maxheight ==="100vh"){
+    if (this.state.maxheight ==="0px"){
+      this.setState({
+        maxheight:this.refs.expand.scrollHeight,
+        lineanim1: "rotate(45deg)",
+        lineanim2: "rotate(-45deg)",
+        lineanim3: "0px",
+        line1fromtop: "34px",
+        line2fromtop: "34px",
+      })
+    }
+    else{
       this.setState({
         maxheight:"0px",
         lineanim1: "none",
@@ -25,16 +39,6 @@ export default class Yearsect extends React.Component{
         lineanim3: "14px",
         line1fromtop: "29px",
         line2fromtop: "38px",
-      })
-    }
-    else{
-      this.setState({
-        maxheight:"100vh",
-        lineanim1: "rotate(45deg)",
-        lineanim2: "rotate(-45deg)",
-        lineanim3: "0px",
-        line1fromtop: "34px",
-        line2fromtop: "34px",
       })
     }
   }
@@ -51,7 +55,10 @@ export default class Yearsect extends React.Component{
     const sub={
       maxHeight: this.state.maxheight,
       overflow:"hidden",
-      transition: "0.5s linear",
+			WebkitTransition: ".5s ease-in",
+			MozTransition: ".5s ease-in",
+			OTransition: ".5s ease-in",
+      transition:".5s ease-in",
 
     }
 	  return(
@@ -72,7 +79,7 @@ export default class Yearsect extends React.Component{
        
         
 
-      <div style={sub}>
+      <div style={sub} ref="expand">
        {this.props.children}
         </div>
 
