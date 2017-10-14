@@ -34,22 +34,14 @@ componentDidMount(){
 
             <div style={content}>
             <strong>Date:</strong><br/>
-            Wednesday, October 28th, 2015<br/><br/>
+            Thursday, November 9th, 2017<br/><br/>
             
             <strong>Time:</strong><br/>
-            9:30am - 2:30pm (lunch to be provided)<br/><br/>
+            9:00am - 1:30pm<br/><br/>
             
-            <strong>Meeting Goals:</strong><br/>
-            Elevate the profile of thermo-fluid research in the department, broaden our graduate students' perspective in research, and improve valuable presentation skills. Presentations will generate discussions and promote interaction between research groups.
-            Presentation Outline:
-            The presentations are organized into two blocks, separated by a 15 minute refreshment break and followed by lunch to facilitate discussions between research groups (a catered lunch is provided). Following the APS Meeting format, each speaker will give a talk of approximately 10 minutes, followed by 4 minutes of questions and 1 minute for transition to the next speaker.
-            A laptop computer will be available for each of the presentations, however to avoid incompatibility with software versions and OS versions, presenters are encouraged to use their own laptops for their talks. The presentation room will be available from 9:00am in order to allow presenters to verify compatibility with the projector and sound system if necessary.
-            <br/><br/>
-            <strong>Abstracts:</strong><br/>
-            All thermo-fluids research groups are invited to submit abstracts and present their research at the meeting. For this meeting, one presentation is invited from each thermo-fluids research group, with additional presentation slots being distributed on a first come basis.
-            Instructions for Abstracts: Please email abstracts to Jeff McClure (jejmcclu@uwaterloo.ca) in the following format: (i) your name (ii) your supervisors name (iii) the title of your presentation (iv) abstract (up to 300 words): a brief description of the work you will be presenting.
-            <br/><br/>
-            To allow sufficient time for putting together the meeting program and organizing the event, the deadline for submission of abstracts is set to October 9th, 2015.</div>
+            The department of Mechanical and Mechatronics Engineering Thermo-Fluids Fall Meeting brings together research groups working in thermo-fluids to give the opportunity for students to elevate the profile of their research, broaden their perspective in the field of thermo-fluids and generate discussion and interaction between research groups. Refreshments will be provided before and during the meeting, and lunch will be provided following the presentations.
+          All thermo-fluids research groups are invited to submit abstracts and present their research at the meeting. Generally, a maximum of two presentations are allowed from each thermo-fluids research group to maintain diversity. A total of 10 presentation slots are available, with preference given to those who submitted abstracts first.
+          </div>
           </Article>
          
           </Col>
@@ -57,14 +49,20 @@ componentDidMount(){
         <Col md={3} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={content}>
           <strong>Important Deadlines</strong><br/><br/>
  
-          <strong>Abstract Submission: </strong>
-            October 9th, 2015<br/>
-            <strong>Meeting Date: </strong>
-            October 28th, 2015<br/>
-            <strong>Meeting Location:</strong> 
-            E5-2004<br/><br/>
-            <strong>Please submit all information and questions to: 
-            Jeffrey McClure, jejmcclu@uwaterloo.ca</strong><br/>
+          <strong>Call for abstracts: </strong>
+          October 16th, 2017<br/>
+            <strong>Abstract submission deadline: </strong>
+            November 1st, 2017<br/>
+            <strong>Notification of acceptance: </strong> 
+            November 3rd, 2017<br/>
+            <strong>Meeting data: </strong>
+            Thursday, November 9th, 2017<br/>
+            <strong>Time: </strong>
+            9:00am - 1:30pm<br/>
+            <strong>Location: </strong>
+            E5-2004<br/>
+            <strong>Contact: </strong>
+            jejmcclu@uwaterloo.ca<br/>
           </Col>
           
         </Row>

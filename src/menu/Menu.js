@@ -147,7 +147,7 @@ export default class Menu extends React.Component{
         <Link to='/'><Col md={3} mdOffset={0} sm={3} smOffset={0} xs={12} xsOffset={0} style={title} onClick={this.gotop}><img src={logoimage} style={logostyle}/></Col></Link>
         <Col md={9} sm={9} xs={9}>
           <Link to='/'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px">Home</Menuopt></Col></Link>
-          <Link to='/schedule'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px">Schedule</Menuopt></Col></Link>
+          <Link to='/instructions'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px">Instructions</Menuopt></Col></Link>
           <Link to='/past'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="100px">Past Seminars</Menuopt></Col></Link>
           <Link to='/keynotes'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="70px">Keynotes</Menuopt></Col></Link>
         </Col>
