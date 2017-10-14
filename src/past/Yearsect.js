@@ -74,6 +74,12 @@ export default class Yearsect extends React.Component{
 			MozTransition: ".5s ease-in",
 			OTransition: ".5s ease-in",
       transition:".5s ease-in",
+
+      fontFamily:"Roboto, Helvetica",
+      fontSize:"16px",
+      letterSpacing:".5px",
+      lineHeight:"150%",
+      textAlign:"right",
     }
 	  return(
 
@@ -99,7 +105,7 @@ export default class Yearsect extends React.Component{
        {this.props.children}
         </div>
       </Col>
-      <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={sideinfo}>
+      <Col md={3} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={sideinfo}>
           <strong>Seminar Info</strong><br/>
           <strong>Organizer: </strong>
           {this.props.organizer}<br/>
