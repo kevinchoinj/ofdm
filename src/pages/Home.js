@@ -66,17 +66,17 @@ componentDidMount(){
         <Col md={3} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
           <div style={title}>Deadlines</div><br/><br/>
       <div style={content}>
-          <strong>Call for abstracts: </strong>
+          <strong>Call for abstracts: </strong><br/>
           October 16th, 2017<br/>
-            <strong>Abstract submission deadline: </strong>
+            <strong>Abstract submission deadline: </strong><br/>
             November 1st, 2017<br/>
-            <strong>Notification of acceptance: </strong> 
+            <strong>Notification of acceptance: </strong> <br/>
             November 3rd, 2017<br/>
-            <strong>Meeting data: </strong>
+            <strong>Meeting data: </strong><br/>
             Thursday, November 9th, 2017<br/>
-            <strong>Time: </strong>
+            <strong>Time: </strong><br/>
             9:00am - 1:30pm<br/>
-            <strong>Location: </strong>
+            <strong>Location: </strong><br/>
             E5-2004<br/>
             <strong>Contact: </strong>
             jejmcclu@uwaterloo.ca<br/>

@@ -14,13 +14,11 @@ export default class Mobilebutton extends React.Component{
   render(){
     const navigate= {
 			position:"absolute",
-			mixBlendMode: "difference",
 			zIndex: "100",
 			right:"0px",
 			width:"60px",
 			height:"70px",
 			cursor:"pointer",
-			willChange: "opacity",
 			transform: this.state.rotate,
 			WebkitTransition: ".25s ease-out",
 			MozTransition: ".25s ease-out",
