@@ -27,6 +27,7 @@ export default class Colortoggle extends React.Component{
       bottom:"25px",
       right:"25px",
       zIndex:"101",
+      cursor:"pointer",
     }
     const btn={
       position:"relative",
