@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import {Switch, Route} from 'react-router-dom';
 
@@ -11,6 +11,7 @@ import Banner from './home/Banner';
 import image1 from './images/uwloo2.jpg';
 import image2 from './images/uwloo1.jpg';
 import image3 from './images/uwloo3.jpg';
+import image4 from './images/uwloo4.jpg';
 
 import Home from './pages/Home';
 import Schedule from './pages/Page1';
@@ -128,7 +129,7 @@ class App extends Component {
 		        <Banner
               opac={ Boolean(match) ? '1': '0'}
               pointerevents={ Boolean(match) ? 'auto': 'none'}
-              bgimage={image3}
+              bgimage={image4}
 		        >Keynotes</Banner>
 		      </div>
 		    )}/>

@@ -17,8 +17,10 @@ componentDidMount(){
 
     }
     const content={
-      fontFamily:"Helvetica",
-
+      fontFamily:"Roboto, Helvetica",
+      fontSize:"16px",
+      letterSpacing:".5px",
+      lineHeight:"150%",
     }
     return(
       <div>
@@ -31,19 +33,19 @@ componentDidMount(){
             </div>
 
             <div style={content}>
-            Date:
+            <strong>Date:</strong><br/>
             Wednesday, October 28th, 2015<br/><br/>
             
-            Time:
+            <strong>Time:</strong><br/>
             9:30am - 2:30pm (lunch to be provided)<br/><br/>
             
-            Meeting Goals:
+            <strong>Meeting Goals:</strong><br/>
             Elevate the profile of thermo-fluid research in the department, broaden our graduate students' perspective in research, and improve valuable presentation skills. Presentations will generate discussions and promote interaction between research groups.
             Presentation Outline:
             The presentations are organized into two blocks, separated by a 15 minute refreshment break and followed by lunch to facilitate discussions between research groups (a catered lunch is provided). Following the APS Meeting format, each speaker will give a talk of approximately 10 minutes, followed by 4 minutes of questions and 1 minute for transition to the next speaker.
             A laptop computer will be available for each of the presentations, however to avoid incompatibility with software versions and OS versions, presenters are encouraged to use their own laptops for their talks. The presentation room will be available from 9:00am in order to allow presenters to verify compatibility with the projector and sound system if necessary.
             <br/><br/>
-            Abstracts:
+            <strong>Abstracts:</strong><br/>
             All thermo-fluids research groups are invited to submit abstracts and present their research at the meeting. For this meeting, one presentation is invited from each thermo-fluids research group, with additional presentation slots being distributed on a first come basis.
             Instructions for Abstracts: Please email abstracts to Jeff McClure (jejmcclu@uwaterloo.ca) in the following format: (i) your name (ii) your supervisors name (iii) the title of your presentation (iv) abstract (up to 300 words): a brief description of the work you will be presenting.
             <br/><br/>
@@ -52,7 +54,7 @@ componentDidMount(){
          
           </Col>
 
-        <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
+        <Col md={3} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={content}>
           <strong>Important Deadlines</strong><br/><br/>
  
           <strong>Abstract Submission: </strong>

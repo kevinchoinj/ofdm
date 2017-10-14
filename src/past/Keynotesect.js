@@ -1,7 +1,7 @@
 import React from "react";
 import Expbutton from './Expbutton';
 import {Row, Col} from 'react-bootstrap';
-export default class Yearsect extends React.Component{
+export default class Keynotesect extends React.Component{
 
 	constructor(props) {
 		super(props);
@@ -67,20 +67,14 @@ export default class Yearsect extends React.Component{
         lineHeight:"150%",
 
     }
-    const sideinfo={
-      maxHeight: this.state.maxheight,
-      overflow:"hidden",
-      WebkitTransition: ".5s ease-in",
-			MozTransition: ".5s ease-in",
-			OTransition: ".5s ease-in",
-      transition:".5s ease-in",
-    }
+
 	  return(
 
       <div>
         <Row>
-        <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-        <div style={title} onClick={this.toggledisplay}> {this.props.year} 
+        <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
+        <div style={title} onClick={this.toggledisplay}> 
+        <strong>{this.props.year}</strong> 
         <Expbutton
 						toggler={this.toggledisplay}
 
@@ -98,17 +92,6 @@ export default class Yearsect extends React.Component{
       <div style={sub} ref="expand">
        {this.props.children}
         </div>
-      </Col>
-      <Col md={4} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={sideinfo}>
-          <strong>Seminar Info</strong><br/>
-          <strong>Organizer: </strong>
-          {this.props.organizer}<br/>
-          <strong> Date: </strong>
-          {this.props.date}<br/>
-          <strong>Time:</strong>
-          {this.props.time}<br/>
-          <strong>Place: </strong>
-          {this.props.place}<br/>
       </Col>
       </Row>
 

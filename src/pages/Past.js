@@ -1,8 +1,5 @@
 import React from 'react';
-import Article from '../home/Article';
 import Yearsect from '../past/Yearsect';
-
-import {Row, Col} from 'react-bootstrap';
 
 import AjithAirody2015 from '../abstracts/2015/AjithAirody.pdf';
 import DuyLee2015 from '../abstracts/2015/DuyLee.pdf';
@@ -40,24 +37,11 @@ export default class Past extends React.Component{
   }
 
   render(){
-    const title={
-      fontSize:"40px",
-      fontWeight:"bold",
-      marginBottom:"25px",
-      fontFamily:"Roboto, Helvetica",
-
-    }
-    const content={
-      fontFamily:"Helvetica",
-
-    }
 
     const dl={
       fontWeight:"bold",
     }
-    const seminarinfo={
-      
-    }
+
     return(
       <div>
           

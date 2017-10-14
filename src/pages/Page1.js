@@ -16,8 +16,10 @@ export default class Page1 extends React.Component{
 
     }
     const content={
-      fontFamily:"Helvetica",
-
+      fontFamily:"Roboto, Helvetica",
+      fontSize:"16px",
+      letterSpacing:".5px",
+      lineHeight:"150%",
     }
     return(
       <div>

@@ -78,7 +78,7 @@ export default class Menu extends React.Component{
     var scrollStep = -window.scrollY / (500 / 15),
     
     scrollInterval = setInterval(function(){
-    if ( window.scrollY != 0 ) {
+    if ( window.scrollY !== 0 ) {
         window.scrollBy( 0, scrollStep );
     }
     else clearInterval(scrollInterval); 

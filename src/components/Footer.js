@@ -22,7 +22,10 @@ export default class Footer extends React.Component{
     }
 
     const info={
-
+      fontFamily:"Roboto, Helvetica",
+      fontSize:"16px",
+      letterSpacing:".5px",
+      lineHeight:"150%",
     }
 
     return(
