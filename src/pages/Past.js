@@ -34,6 +34,7 @@ import YusukeKoda2012 from '../abstracts/2012/YusukeKoda.pdf';
 export default class Past extends React.Component{
 
   componentDidMount(){
+    this.props.checkpage(); 
   }
 
   render(){

@@ -3,10 +3,49 @@ import {Col} from 'react-bootstrap';
 import logo from '../images/englogo.png';
 
 export default class Banner extends React.Component{
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      offsettop:"0",
+    }
+    this.movebanner=this.movebanner.bind(this)
+  }
+   /*fades in the banner*/
+   componentDidMount() {
+    window.addEventListener("scroll", this.movebanner);
+    window.addEventListener("resize", this.movebanner);
+    this.movebanner();
+   }
+ 
+   movebanner(){
+     let supportPageOffset = window.pageXOffset !== undefined;
+     let isCSS1Compat = ((document.compatMode || '') === 'CSS1Compat');
+     let scroll = {
+        x: supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft,
+        y: supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop
+     };
+     try{
+       if (scroll.y <170){
+         this.setState({
+           offsettop: scroll.y
+         });
+       }
+      else{
+         this.setState({
+           offsettop:"170px"
+         });
+       }
+     }
+     catch(err) {
+   }
+ }
+
+
   render(){
     const banner={
       position:"absolute",
-      top:"0px",
+      top:this.state.offsettop,
       width:"100%",
       background: 'url('+this.props.bgimage+')',
 			backgroundRepeat: "no-repeat",
@@ -37,6 +76,8 @@ export default class Banner extends React.Component{
       MozTransition: ".5s ease-out",
       OTransition: ".5s ease-out",
       transition:".5s ease-out",
+
+      zIndex:"-1",
     }
 
     const logostyle={

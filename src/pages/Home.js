@@ -8,6 +8,10 @@ import {Row, Col} from 'react-bootstrap';
 export default class Home extends React.Component{
 
 componentDidMount(){
+
+  this.props.checkpage(); 
+
+
 }
   render(){
     const title={

@@ -106,7 +106,7 @@ export default class Yearsect extends React.Component{
         </div>
       </Col>
       <Col md={3} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={sideinfo}>
-          <strong>Seminar Info</strong><br/>
+          <strong>{this.props.year}</strong><br/>
           <strong>Organizer: </strong>
           {this.props.organizer}<br/>
           <strong> Date: </strong>

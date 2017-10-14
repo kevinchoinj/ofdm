@@ -29,9 +29,37 @@ class App extends Component {
       up:"",
       menuheight:"80px",
       offset:"0px",
+
+      currentpage:"",
     }
     this.checkscroll = this.checkscroll.bind(this)
+
+    this.pageishome = this.pageishome.bind(this)
+    this.pageisinstruct = this.pageisinstruct.bind(this)
+    this.pageispast = this.pageispast.bind(this)
+    this.pageiskeynote = this.pageiskeynote.bind(this)
   }
+
+pageishome(){
+  this.setState({
+    currentpage:"home"
+  })
+}
+pageisinstruct(){
+  this.setState({
+    currentpage:"instructions"
+  })
+}
+pageispast(){
+  this.setState({
+    currentpage:"past"
+  })
+}
+pageiskeynote(){
+  this.setState({
+    currentpage:"keynotes"
+  })
+}
 
   componentDidMount() {
     window.addEventListener('scroll', this.checkscroll);
@@ -92,8 +120,13 @@ class App extends Component {
     return (
       
       <div className="App">
-        <Backdrop/>
-      <Menu menuheight={this.state.menuheight} offset={this.state.offset}/>
+      <Backdrop/>
+
+      <Menu 
+        menuheight={this.state.menuheight} 
+        offset={this.state.offset}
+        currentpage={this.state.currentpage}
+      />
       
       <div style={placeholder}>
       </div>
@@ -137,10 +170,11 @@ class App extends Component {
 		    )}/>
 
       <Switch>
-      <Route exact path="/" component={Home}/>
-      <Route exact path="/instructions" component={Instructions}/>
-      <Route exact path="/past" component={Past}/>
-      <Route exact path="/keynotes" component={Keynotes}/>
+      <Route exact path="/" render={(props) => <Home {...props} checkpage={this.pageishome}/>} />
+      <Route exact path="/instructions" render={(props) => <Instructions {...props} checkpage={this.pageisinstruct}/>} />
+      <Route exact path="/past" render={(props) => <Past {...props} checkpage={this.pageispast}/>} />
+      <Route exact path="/keynotes" render={(props) => <Keynotes {...props} checkpage={this.pageiskeynote}/>} />
+      
       </Switch>
         <Footer/>
       </div>

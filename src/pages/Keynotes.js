@@ -7,6 +7,7 @@ import {Row} from 'react-bootstrap';
 export default class Page1 extends React.Component{
 
   componentDidMount(){
+    this.props.checkpage(); 
   }
 
   render(){
