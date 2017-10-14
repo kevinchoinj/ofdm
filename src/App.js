@@ -19,6 +19,7 @@ import Past from './pages/Past';
 import Keynotes from './pages/Keynotes';
 import Backdrop from './components/Backdrop';
 
+import Colortoggle from './components/Colortoggle';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -29,8 +30,10 @@ class App extends Component {
       up:"",
       menuheight:"80px",
       offset:"0px",
-
       currentpage:"",
+
+      color1:"rgba(26,26,26,1)",
+      color2:"rgba(255,255,255,1)",
     }
     this.checkscroll = this.checkscroll.bind(this)
 
@@ -38,6 +41,8 @@ class App extends Component {
     this.pageisinstruct = this.pageisinstruct.bind(this)
     this.pageispast = this.pageispast.bind(this)
     this.pageiskeynote = this.pageiskeynote.bind(this)
+
+    this.togglecolors = this.togglecolors.bind(this);
   }
 
 pageishome(){
@@ -59,6 +64,21 @@ pageiskeynote(){
   this.setState({
     currentpage:"keynotes"
   })
+}
+
+togglecolors(){
+  if(this.state.color1==="rgba(26,26,26,1)"){
+    this.setState({
+      color1:"rgba(255,255,255,1)",
+      color2:"rgba(26,26,26,1)",
+    })
+  }
+  else{
+    this.setState({
+      color1:"rgba(26,26,26,1)",
+      color2:"rgba(255,255,255,1)",
+    })
+  }
 }
 
   componentDidMount() {
@@ -117,15 +137,25 @@ pageiskeynote(){
       marginBottom:"50px",
     }
 
+    const appstyle={
+      backgroundColor:this.state.color1,
+      WebkitTransition: ".5s ease-out",
+      MozTransition: ".5s ease-out",
+      OTransition: ".5s ease-out",
+      transition:".5s ease-out",
+    }
+
     return (
       
-      <div className="App">
-      <Backdrop/>
+      <div className="App" style={appstyle}>
+      <Backdrop color1={this.state.color1} color2={this.state.color2}/>
 
+      <Colortoggle togglecolors={this.togglecolors}  color1={this.state.color1} color2={this.state.color2}/>
       <Menu 
         menuheight={this.state.menuheight} 
         offset={this.state.offset}
         currentpage={this.state.currentpage}
+        color1={this.state.color1} color2={this.state.color2}
       />
       
       <div style={placeholder}>
@@ -136,7 +166,10 @@ pageiskeynote(){
               opac={ Boolean(match) ? '1': '0'}
               pointerevents={ Boolean(match) ? 'auto': 'none'}
               bgimage={image1}
-		        >Thermo-Fluids Fall Meeting</Banner>
+              color1={this.state.color1} color2={this.state.color2}
+		        >
+            Thermo-Fluids Fall Meeting
+            </Banner>
 		      </div>
 		    )}/>
       <Route exact path={"/instructions"} children={({ match }) => (
@@ -145,6 +178,7 @@ pageiskeynote(){
               opac={ Boolean(match) ? '1': '0'}
               pointerevents={ Boolean(match) ? 'auto': 'none'}
               bgimage={image2}
+              color1={this.state.color1} color2={this.state.color2}
 		        >Instructions</Banner>
 		      </div>
 		    )}/>
@@ -155,6 +189,7 @@ pageiskeynote(){
               opac={ Boolean(match) ? '1': '0'}
               pointerevents={ Boolean(match) ? 'auto': 'none'}
               bgimage={image3}
+              color1={this.state.color1} color2={this.state.color2}
 		        >Past Years</Banner>
 		      </div>
 		    )}/>
@@ -165,18 +200,19 @@ pageiskeynote(){
               opac={ Boolean(match) ? '1': '0'}
               pointerevents={ Boolean(match) ? 'auto': 'none'}
               bgimage={image4}
+              color1={this.state.color1} color2={this.state.color2}
 		        >Keynotes</Banner>
 		      </div>
 		    )}/>
 
       <Switch>
-      <Route exact path="/" render={(props) => <Home {...props} checkpage={this.pageishome}/>} />
-      <Route exact path="/instructions" render={(props) => <Instructions {...props} checkpage={this.pageisinstruct}/>} />
-      <Route exact path="/past" render={(props) => <Past {...props} checkpage={this.pageispast}/>} />
-      <Route exact path="/keynotes" render={(props) => <Keynotes {...props} checkpage={this.pageiskeynote}/>} />
+      <Route exact path="/" render={(props) => <Home {...props} checkpage={this.pageishome} color1={this.state.color1} color2={this.state.color2}/>} />
+      <Route exact path="/instructions" render={(props) => <Instructions {...props} checkpage={this.pageisinstruct} color1={this.state.color1} color2={this.state.color2}/>} />
+      <Route exact path="/past" render={(props) => <Past {...props} checkpage={this.pageispast} color1={this.state.color1} color2={this.state.color2}/>} />
+      <Route exact path="/keynotes" render={(props) => <Keynotes {...props} checkpage={this.pageiskeynote} color1={this.state.color1} color2={this.state.color2}/>} />
       
       </Switch>
-        <Footer/>
+        <Footer color1={this.state.color1} color2={this.state.color2}/>
       </div>
     );
   }

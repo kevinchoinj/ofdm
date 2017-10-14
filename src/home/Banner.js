@@ -59,6 +59,7 @@ export default class Banner extends React.Component{
       transition:".5s ease-out",
       opacity: this.props.opac,
       pointerEvents:this.props.pointerevents,
+      zIndex:"2",
     }
 
     const text={
@@ -77,7 +78,9 @@ export default class Banner extends React.Component{
       OTransition: ".5s ease-out",
       transition:".5s ease-out",
 
-      zIndex:"-1",
+      zIndex:"1",
+
+      color:this.props.color2,
     }
 
     const logostyle={

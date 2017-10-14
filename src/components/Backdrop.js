@@ -1,6 +1,8 @@
 import React from 'react';
 import {Row,Col} from 'react-bootstrap';
-import image1 from '../images/englogoblk.png';
+import darkimage from '../images/englogoblk.png';
+import lightimage from '../images/englogo.png';
+
 export default class Footer extends React.Component{
   render(){
     const backdrop={
@@ -16,7 +18,12 @@ export default class Footer extends React.Component{
     return(
       <div style={backdrop}>
       <Col md={8} mdOffset={2} sm={10} smOffset={1} xs={12} xsOffset={0}>
-        <img src={image1} style={imagestyle}/>
+        {this.props.color1==="rgba(26,26,26,1)"?
+        <img src={lightimage} style={imagestyle}/>
+        :
+        <img src={darkimage} style={imagestyle}/>
+    }
+
       </Col>
     
       </div>

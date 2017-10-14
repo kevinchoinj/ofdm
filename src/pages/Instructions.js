@@ -16,6 +16,7 @@ export default class Instructions extends React.Component{
       fontWeight:"bold",
       marginBottom:"25px",
       fontFamily:"Roboto, Helvetica",
+      color:this.props.color2,
 
     }
     const content={
@@ -23,6 +24,7 @@ export default class Instructions extends React.Component{
       fontSize:"16px",
       letterSpacing:".5px",
       lineHeight:"150%",
+      color:this.props.color2,
     }
 
     const sideimage={
@@ -32,7 +34,7 @@ export default class Instructions extends React.Component{
       <div>
         <Row>
           <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          <Article>
+
           <div style={title}>
           Abstracts
             </div>
@@ -44,9 +46,7 @@ export default class Instructions extends React.Component{
             The abstract must include your name, your supervisors name, the title of your presentation, and a maximum 1 page abstract.<br/>
             To allow sufficient time for putting together the meeting program and organizing the event, the deadline for submission of abstracts is set to November 1st, 2017.<br/>
             </div>
-          </Article>
-
-          <Article>
+  
           <div style={title}>
           Presentations
             </div>
@@ -56,7 +56,6 @@ export default class Instructions extends React.Component{
             <br/><br/>
             A windows laptop computer will be available for student to use with Powerpoint tested for compatability with .mp4, .avi, .wmv movie files, however to avoid possible incompatibilities, presenters are encouraged to use their own laptops for their talks. The presentation room will be available starting at 8:30am in order to allow presenters to test their presentations if necessary.
             </div>
-          </Article>
           </Col>
 
           <Col md={3} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>

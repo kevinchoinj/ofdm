@@ -19,6 +19,7 @@ componentDidMount(){
       fontWeight:"bold",
       marginBottom:"25px",
       fontFamily:"Roboto, Helvetica",
+      color:this.props.color2,
 
     }
     const content={
@@ -26,6 +27,7 @@ componentDidMount(){
       fontSize:"16px",
       letterSpacing:".5px",
       lineHeight:"150%",
+      color:this.props.color2,
     }
     const imagecontainer={
       marginTop:"50px",
@@ -34,12 +36,14 @@ componentDidMount(){
     const imagestyle={
       width:"100%",
     }
+
+
     return(
       <div>
 
         <Row>
           <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          <Article>
+         
           <div style={title}>
             2017
             </div>
@@ -54,7 +58,6 @@ componentDidMount(){
             The department of Mechanical and Mechatronics Engineering Thermo-Fluids Fall Meeting brings together research groups working in thermo-fluids to give the opportunity for students to elevate the profile of their research, broaden their perspective in the field of thermo-fluids and generate discussion and interaction between research groups. Refreshments will be provided before and during the meeting, and lunch will be provided following the presentations.
           All thermo-fluids research groups are invited to submit abstracts and present their research at the meeting. Generally, a maximum of two presentations are allowed from each thermo-fluids research group to maintain diversity. A total of 10 presentation slots are available, with preference given to those who submitted abstracts first.
           </div>
-          </Article>
          
           </Col>
 

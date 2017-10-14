@@ -51,6 +51,8 @@ export default class Keynotesect extends React.Component{
       cursor:"pointer",
      position:"relative",
      marginBottom:"25px",
+
+     color:this.props.color2,
     }
 
     const sub={
@@ -65,6 +67,8 @@ export default class Keynotesect extends React.Component{
         fontSize:"16px",
         letterSpacing:".5px",
         lineHeight:"150%",
+
+        color:this.props.color2,
 
     }
 

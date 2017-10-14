@@ -8,7 +8,8 @@ import Mobilebutton from './Mobilebutton';
 import Menuopt from './Menuoption';
 import Mobilepanel from './Mobilepanel';
 
-import logoimage from '../images/uwlogo.png';
+import logoimage from '../images/englogoblk.png';
+import logowhite from '../images/englogo.png';
 
 export default class Menu extends React.Component{
   constructor(props){
@@ -106,7 +107,8 @@ export default class Menu extends React.Component{
       BoxShadow: "0 2px 5px rgba(0,0,0,.4)",
       backgroundColor:"#fff",
 
-      color:"#1a1a1a",
+      
+      backgroundColor:this.props.color1,
       fontFamily:"Roboto, Helvetica",
       zIndex:"4",
     }
@@ -119,8 +121,6 @@ export default class Menu extends React.Component{
       OTransition: ".5s ease-out",
       transition:".5s ease-out",
 
-      color:"#1a1a1a",
-      fontFamily:"Roboto, Helvetica",
 
     }
     const menuoption={
@@ -167,7 +167,7 @@ export default class Menu extends React.Component{
       position:"absolute",
       width:"100%",
       borderRight:"8px solid transparent",
-      borderLeft:"8px solid rgba(26,26,26,1)",
+      borderLeft:"8px solid "+this.props.color2,
       borderTop:"8px solid transparent",
       borderBottom: "8px solid transparent",
     }
@@ -178,31 +178,38 @@ export default class Menu extends React.Component{
     <Row>
       <Col md={10} mdOffset={1} sm={12} smOffset={0} xs={12} xsOffset={0} style={menucontainer}>
         <Row>
-        <Link to='/'><Col md={3} mdOffset={0} sm={3} smOffset={0} xs={12} xsOffset={0} style={title} onClick={this.gotop}><img src={logoimage} style={logostyle}/></Col></Link>
+        <Link to='/'><Col md={3} mdOffset={0} sm={3} smOffset={0} xs={12} xsOffset={0} style={title} onClick={this.gotop}>
+        {this.props.color2==="rgba(255,255,255,1)"?
+        <img src={logowhite} style={logostyle}/>
+        :
+        <img src={logoimage} style={logostyle}/>
+      }
+        
+        </Col></Link>
         <Col md={9} sm={9} xs={9}>
         {
         this.props.currentpage==="home" ? 
-        <Link to='/'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px">Home<div style={indic}></div></Menuopt></Col></Link>
+        <Link to='/'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px" color1={this.props.color1} color2={this.props.color2}>Home<div style={indic}></div></Menuopt></Col></Link>
         :
-        <Link to='/'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px">Home</Menuopt></Col></Link>
+        <Link to='/'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px" color1={this.props.color1} color2={this.props.color2}>Home</Menuopt></Col></Link>
         }
         {
         this.props.currentpage==="instructions" ? 
-          <Link to='/instructions'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px">Instructions<div style={indic}></div></Menuopt></Col></Link>
+          <Link to='/instructions'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px" color1={this.props.color1} color2={this.props.color2}>Instructions<div style={indic}></div></Menuopt></Col></Link>
           :
-          <Link to='/instructions'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px">Instructions</Menuopt></Col></Link>
+          <Link to='/instructions'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px" color1={this.props.color1} color2={this.props.color2}>Instructions</Menuopt></Col></Link>
         }
         {
           this.props.currentpage==="past"?
-          <Link to='/past'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="100px">Past Seminars<div style={indic}></div></Menuopt></Col></Link>
+          <Link to='/past'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="100px" color1={this.props.color1} color2={this.props.color2}>Past Seminars<div style={indic}></div></Menuopt></Col></Link>
           :
-          <Link to='/past'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="100px">Past Seminars</Menuopt></Col></Link>
+          <Link to='/past'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="100px" color1={this.props.color1} color2={this.props.color2}>Past Seminars</Menuopt></Col></Link>
         }
         {
           this.props.currentpage==="keynotes"?
-          <Link to='/keynotes'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="70px">Keynotes<div style={indic}></div></Menuopt></Col></Link>
+          <Link to='/keynotes'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="70px" color1={this.props.color1} color2={this.props.color2}>Keynotes<div style={indic}></div></Menuopt></Col></Link>
           :
-          <Link to='/keynotes'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="70px">Keynotes</Menuopt></Col></Link>
+          <Link to='/keynotes'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="70px" color1={this.props.color1} color2={this.props.color2}>Keynotes</Menuopt></Col></Link>
         }
           
           
@@ -225,6 +232,7 @@ export default class Menu extends React.Component{
             
             display={this.state.displaymobile}
             btncolor={this.state.btncolor}
+            color1={this.props.color1} color2={this.props.color2}
           />
 
           <Mobilepanel mobileoffset={this.state.mobileoffset} toggler={this.togglemenu} gotop={this.gotop}/>

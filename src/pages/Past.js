@@ -52,6 +52,7 @@ export default class Past extends React.Component{
           date="Wednesday, October 28, 2015"
           time="9:30am - 2:30pm"
           place="E5-2004"
+          color1={this.props.color1} color2={this.props.color2}
           >
           <a href={HuangruiMo2015} download style={dl}>A ghost-cell immersed boundary method for complex and dynamic shock-particle interactions</a> <br/>
           Huangrui Mo<br/>
@@ -97,7 +98,9 @@ export default class Past extends React.Component{
           organizer="Chris Morton"
           date="Thursday, October 23, 2013"
           time="10:00am - 2:00pm"
-          place="E5-2004">
+          place="E5-2004"
+          color1={this.props.color1} color2={this.props.color2}
+          >
           <a href={BrianKettlewell2013} download style={dl}>Semi-analytical investigation of vortex shedding within the glottis an concomitant effect on vocal fold dynamics</a><br/> 
           Brian Kettlewell<br/>
           Advisor: Dr. Sean Peterson<br/><br/>
@@ -134,7 +137,8 @@ export default class Past extends React.Component{
           organizer="Chris Morton"
           date="Thursday, October 26, 2012"
           time="10:00am - 2:00pm"
-          place="E5-2004">
+          place="E5-2004"
+          color1={this.props.color1} color2={this.props.color2}>
           <a href={HollyNeatby2012} download style={dl}>Developing a reliable method of estimating drag from far field measurements</a> <br/>
           Holly Neatby<br/>
           Advisor: Prof. Serhiy Yarusevych<br/><br/>
@@ -185,6 +189,7 @@ export default class Past extends React.Component{
           date="Thursday, October 27, 2011"
           time="10:00am - 2:00pm"
           place="E5-2004"
+          color1={this.props.color1} color2={this.props.color2}
           >
           <strong>Unsteady Flow Investigation around a Pitching Wind Turbine Blade</strong> <br/>
           Kobra Gharali<br/>

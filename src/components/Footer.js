@@ -11,10 +11,10 @@ export default class Footer extends React.Component{
       bottom:"0px",
       left:"0px",
       right:"0px",
-      backgroundColor:"#1a1a1a",
+      backgroundColor:"#000",
       fontFamily:"Roboto, Helvetica",
 
-      color:"hsla(0,0%,100%,.7)"
+      color:"#ddd",
     }
 
     const title={

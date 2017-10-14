@@ -51,6 +51,8 @@ export default class Yearsect extends React.Component{
       cursor:"pointer",
      position:"relative",
      marginBottom:"25px",
+
+     color:this.props.color2,
     }
 
     const sub={
@@ -66,6 +68,8 @@ export default class Yearsect extends React.Component{
         letterSpacing:".5px",
         lineHeight:"150%",
 
+        color: this.props.color2,
+
     }
     const sideinfo={
       maxHeight: this.state.maxheight,
@@ -80,6 +84,8 @@ export default class Yearsect extends React.Component{
       letterSpacing:".5px",
       lineHeight:"150%",
       textAlign:"right",
+
+      color: this.props.color2,
     }
 	  return(
 

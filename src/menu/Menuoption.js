@@ -28,7 +28,7 @@ leave(){
 }
   render(){
     const option={
-      color:this.state.color,
+      color:this.props.color2,
 
 
     }
@@ -37,7 +37,7 @@ leave(){
 			height: "2px",
 			width: this.state.width,
 			position: "absolute",
-			backgroundColor: this.state.color,
+			backgroundColor: this.props.color2,
 			bottom:"0px",
       left:"0",
       right:"0",
