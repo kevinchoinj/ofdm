@@ -17,6 +17,7 @@ import Home from './pages/Home';
 import Instructions from './pages/Instructions';
 import Past from './pages/Past';
 import Keynotes from './pages/Keynotes';
+import Backdrop from './components/Backdrop';
 
 class App extends Component {
   constructor(props) {
@@ -89,8 +90,9 @@ class App extends Component {
     }
 
     return (
+      
       <div className="App">
-
+        <Backdrop/>
       <Menu menuheight={this.state.menuheight} offset={this.state.offset}/>
       
       <div style={placeholder}>

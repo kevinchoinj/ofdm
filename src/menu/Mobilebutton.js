@@ -6,43 +6,19 @@ export default class Mobilebutton extends React.Component{
 		super(props);
 		this.state = {
 		
-		 buttoncolor: "#1a1a1a",
-		 rotate:"rotate(0deg)",
  
 		}
-			this.hoverbutton = this.hoverbutton.bind(this)
-		 this.nothoverbutton = this.nothoverbutton.bind(this)
 	}
-	hoverbutton(){
-		this.setState({
-		 buttoncolor: "#aaa",
-	 });
-	 if (this.props.line3rot === "0px"){
-		this.setState({
-			rotate:"rotate(180deg)",
-		})
-	 }
-}
 
-nothoverbutton(){
-	this.setState({
-		 buttoncolor: "#1a1a1a",
-		 rotate: "rotate(0deg)",
-	});
-
-}
 
   render(){
 		const navigate= {
 			position:"fixed",
-			mixBlendMode: "difference",
 			zIndex: "100",
 			right:"15px",
 			width:"60px",
 			height:"70px",
 			cursor:"pointer",
-			willChange: "opacity",
-			transform: this.state.rotate,
 			WebkitTransition: ".25s ease-out",
 			MozTransition: ".25s ease-out",
 			OTransition: ".25s ease-out",
@@ -59,7 +35,7 @@ nothoverbutton(){
 			height: "3px",
 			width: "24px",
 			position: "absolute",
-			backgroundColor: this.state.buttoncolor,
+			backgroundColor: this.props.btncolor,
 			top:this.props.line1top,
 			left: "18px",
 			zIndex: "11",
@@ -76,7 +52,7 @@ nothoverbutton(){
 			height: "3px",
 			width: "24px",
 			position: "absolute",
-			backgroundColor: this.state.buttoncolor,
+			backgroundColor: this.props.btncolor,
 			top:this.props.line2top,
 			left: "18px",
 			zIndex: "11",
@@ -93,7 +69,7 @@ nothoverbutton(){
 			height: "3px",
 			width: this.props.line3rot,
 			position: "absolute",
-			backgroundColor: this.state.buttoncolor,
+			backgroundColor: this.props.btncolor,
 			top:"47px",
 			left: "18px",
 			zIndex: "11",

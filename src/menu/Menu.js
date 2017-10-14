@@ -22,6 +22,8 @@ export default class Menu extends React.Component{
       line2fromtop: "38px",
 
       mobileoffset:"-100vw",
+
+      btncolor:"#1a1a1a",
     }
     this.checkscreen = this.checkscreen.bind(this);
 
@@ -59,6 +61,7 @@ export default class Menu extends React.Component{
          line1fromtop: "34px",
          line2fromtop: "34px",
          mobileoffset:"0px",
+         btncolor:"#fff",
       });
     }
     else if(this.state.lineanim3 ==="0px"){
@@ -69,6 +72,7 @@ export default class Menu extends React.Component{
          line1fromtop: "29px",
          line2fromtop: "38px",
          mobileoffset:"-100vw",
+         btncolor:"#1a1a1a",
       });
     }
   }
@@ -168,6 +172,7 @@ export default class Menu extends React.Component{
             line2top={this.state.line2fromtop}
             
             display={this.state.displaymobile}
+            btncolor={this.state.btncolor}
           />
 
           <Mobilepanel mobileoffset={this.state.mobileoffset}/>

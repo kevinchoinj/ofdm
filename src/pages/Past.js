@@ -185,51 +185,51 @@ export default class Past extends React.Component{
           time="10:00am - 2:00pm"
           place="E5-2004"
           >
-          Unsteady Flow Investigation around a Pitching Wind Turbine Blade <br/>
+          <strong>Unsteady Flow Investigation around a Pitching Wind Turbine Blade</strong> <br/>
           Kobra Gharali<br/>
           Advisor: Dr. David Johnson<br/><br/>
           
-          Experimental study of vortex dynamics in the wake of a dual step cylinder <br/>
+          <strong>Experimental study of vortex dynamics in the wake of a dual step cylinder</strong> <br/>
           Chris Morton<br/>
           Advisor: Dr. Serhiy Yarusevych<br/><br/>
             
-          A numerical study of steady flow through a curved tube with wavy walls <br/>
+          <strong>A numerical study of steady flow through a curved tube with wavy walls</strong> <br/>
           Chekema Prince<br/>
           Advisor: Dr. Sean Peterson<br/><br/>
           
-          Irregular Vocal Fold Dynamics Incited by Asymmetric Fluid Loading in a Model of Recurrent Laryngeal Nerve Paralysis <br/>
+          <strong>Irregular Vocal Fold Dynamics Incited by Asymmetric Fluid Loading in a Model of Recurrent Laryngeal Nerve Paralysis</strong> <br/>
           David Sommer<br/>
           Advisor: Dr. Sean Peterson<br/><br/>
           
-          Simulation of a turbulent premixed methane-air flame <br/>
+          <strong>Simulation of a turbulent premixed methane-air flame</strong> <br/>
           Daniele Dovizio<br/>
           Advisor: Dr. Cecile Devaud<br/><br/>
           
-          Fire Testing Standards for Transportation Applications: A Global Comparison <br/>
+          <strong>Fire Testing Standards for Transportation Applications: A Global Comparison</strong> <br/>
           Brenda Prine<br/>
           Advisor:  E.J. Weckman<br/><br/>
           
-          Droplet Sorting at a T-junction under Asymmetric Geometries and Flow Conditions <br/>
+          <strong>Droplet Sorting at a T-junction under Asymmetric Geometries and Flow Conditions</strong> <br/>
           Tom Glawdel and Caglar Elbuken<br/>
           Advisor: Carolyn L. Ren<br/><br/>
           
-          Rarefaction effects on the catalytic oxidation of hydrogen in microchannels <br/>
+          <strong>Rarefaction effects on the catalytic oxidation of hydrogen in microchannels</strong> <br/>
           Azad Qazi Zade<br/>
           Advisor: Dr. Metin Renksizbulut<br/><br/>
           
-          Molecular Simulation of Chemically Reacting Flows in Microchannels and Nanochannels <br/>
+          <strong>Molecular Simulation of Chemically Reacting Flows in Microchannels and Nanochannels</strong> <br/>
           Amir Ahmadzadegan<br/>
           Advisor: Dr. Metin Renksizbulut and Dr. John Wen<br/><br/>
           
-          Measurements and flow pattern visualizations of two-phase flow boiling in single channel microevaporators <br/>
+          <strong>Measurements and flow pattern visualizations of two-phase flow boiling in single channel microevaporators</strong> <br/>
           Elmer Galvis<br/>
           Advisor: Dr. Richard Culham<br/><br/>
           
-          Removal of nitric oxide from flue gas in a spray tower <br/>
+          <strong>Removal of nitric oxide from flue gas in a spray tower</strong> <br/>
           Hesheng Yu<br/>
           Advisor: Zhongchao Tan<br/><br/>
           
-          Hydrothermal conversion of biomass into value-add chemical 5-HMF <br/>
+          <strong>Hydrothermal conversion of biomass into value-add chemical 5-HMF</strong> <br/>
           Fang Liu<br/>
           Advisor: Zhongchao Tan<br/><br/>
         </Yearsect>
