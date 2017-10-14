@@ -36,13 +36,15 @@ componentDidMount(){
     const imagestyle={
       width:"100%",
     }
-
+    const main={
+      marginBottom:"50px",
+    }
 
     return(
       <div>
 
         <Row>
-          <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
+          <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={main}>
          
           <div style={title}>
             2017

@@ -30,11 +30,16 @@ export default class Instructions extends React.Component{
     const sideimage={
       width:"100%",
     }
+
+    const para1={
+      marginBottom:"50px",
+    }
     return(
       <div>
         <Row>
           <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
 
+        <div style={para1}>
           <div style={title}>
           Abstracts
             </div>
@@ -46,7 +51,8 @@ export default class Instructions extends React.Component{
             The abstract must include your name, your supervisors name, the title of your presentation, and a maximum 1 page abstract.<br/>
             To allow sufficient time for putting together the meeting program and organizing the event, the deadline for submission of abstracts is set to November 1st, 2017.<br/>
             </div>
-  
+        </div>
+
           <div style={title}>
           Presentations
             </div>

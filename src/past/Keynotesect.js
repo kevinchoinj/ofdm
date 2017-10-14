@@ -87,7 +87,7 @@ export default class Keynotesect extends React.Component{
 						line3rot={this.state.lineanim3}
 						line1top={this.state.line1fromtop}
             line2top={this.state.line2fromtop}
-            
+            color1={this.props.color1} color2={this.props.color2}
           />
            </div>
        
