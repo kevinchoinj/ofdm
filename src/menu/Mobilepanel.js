@@ -63,10 +63,10 @@ checkresize(){
       <div style={panel}>
       <Row>
         <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-        <Link to='/'><div style={mobileoption}>Home</div></Link>
-        <Link to='/instructions'><div style={mobileoption}>Instructions</div></Link>
-        <Link to='/past'><div style={mobileoption}>Past Seminars</div></Link>
-        <Link to='/keynotes'><div style={mobileoption}>Keynotes</div></Link>
+        <Link to='/'><div style={mobileoption} onClick={this.props.toggler}>Home</div></Link>
+        <Link to='/instructions'><div style={mobileoption} onClick={this.props.toggler}>Instructions</div></Link>
+        <Link to='/past'><div style={mobileoption} onClick={this.props.toggler}>Past Seminars</div></Link>
+        <Link to='/keynotes'><div style={mobileoption} onClick={this.props.toggler}>Keynotes</div></Link>
         </Col>
        </Row>
       </div>

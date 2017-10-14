@@ -48,7 +48,7 @@ export default class Banner extends React.Component{
     return(
       <div>
       <div style={banner}>
-        <img src={logo} style={logostyle}/>
+        {/* <img src={logo} style={logostyle}/> */}
       </div>
 
         

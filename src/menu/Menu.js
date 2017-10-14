@@ -175,7 +175,7 @@ export default class Menu extends React.Component{
             btncolor={this.state.btncolor}
           />
 
-          <Mobilepanel mobileoffset={this.state.mobileoffset}/>
+          <Mobilepanel mobileoffset={this.state.mobileoffset} toggler={this.togglemenu}/>
     </Row>
     </div>
     );
