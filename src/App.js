@@ -31,9 +31,10 @@ class App extends Component {
       menuheight:"80px",
       offset:"0px",
       currentpage:"",
-
-      color1:"rgba(26,26,26,1)",
-      color2:"rgba(255,255,255,1)",
+      
+      color1:"rgba(255,255,255,1)",
+      color2:"rgba(26,26,26,1)",
+      
     }
     this.checkscroll = this.checkscroll.bind(this)
 

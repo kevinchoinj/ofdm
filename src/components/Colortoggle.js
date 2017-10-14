@@ -9,7 +9,7 @@ export default class Colortoggle extends React.Component{
   }
 
   togglethis(){
-    if (this.props.color1 == "rgba(26,26,26,1)"){
+    if (this.props.color1 == "rgba(255,255,255,1)"){
       this.setState({
         offset: "calc(100% - 25px)",
       });
