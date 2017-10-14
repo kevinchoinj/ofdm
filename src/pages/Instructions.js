@@ -1,6 +1,8 @@
 import React from 'react';
 import Article from '../home/Article';
 
+import image1 from '../images/2.jpeg';
+
 import {Row, Col} from 'react-bootstrap';
 export default class Instructions extends React.Component{
 
@@ -21,10 +23,14 @@ export default class Instructions extends React.Component{
       letterSpacing:".5px",
       lineHeight:"150%",
     }
+
+    const sideimage={
+      width:"100%",
+    }
     return(
       <div>
         <Row>
-          <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
+          <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
           <Article>
           <div style={title}>
           Abstracts
@@ -38,10 +44,7 @@ export default class Instructions extends React.Component{
             To allow sufficient time for putting together the meeting program and organizing the event, the deadline for submission of abstracts is set to November 1st, 2017.<br/>
             </div>
           </Article>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
+
           <Article>
           <div style={title}>
           Presentations
@@ -54,7 +57,13 @@ export default class Instructions extends React.Component{
             </div>
           </Article>
           </Col>
+
+          <Col md={3} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
+          <img src={image1} style={sideimage}/>
+          </Col>
         </Row>
+
+        
       </div>
     );
   }

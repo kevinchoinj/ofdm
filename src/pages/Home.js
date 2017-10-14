@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Article from '../home/Article';
+import image1 from '../images/4.png';
 
 import {Row, Col} from 'react-bootstrap';
 
@@ -21,6 +22,13 @@ componentDidMount(){
       fontSize:"16px",
       letterSpacing:".5px",
       lineHeight:"150%",
+    }
+    const imagecontainer={
+      marginTop:"50px",
+      marginBottom:"50px",
+    }
+    const imagestyle={
+      width:"100%",
     }
     return(
       <div>
@@ -46,9 +54,9 @@ componentDidMount(){
          
           </Col>
 
-        <Col md={3} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={content}>
-          <strong>Important Deadlines</strong><br/><br/>
- 
+        <Col md={3} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
+          <div style={title}>Deadlines</div><br/><br/>
+      <div style={content}>
           <strong>Call for abstracts: </strong>
           October 16th, 2017<br/>
             <strong>Abstract submission deadline: </strong>
@@ -63,9 +71,16 @@ componentDidMount(){
             E5-2004<br/>
             <strong>Contact: </strong>
             jejmcclu@uwaterloo.ca<br/>
+            </div>
           </Col>
           
         </Row>
+
+        <Row>
+          <Col md={8} mdOffset={2} sm={10} smOffset={1} xs={10} xsOffset={1} style={imagecontainer}>
+          <img src={image1} style={imagestyle}/>
+          </Col> 
+          </Row>
       </div>
     );
   }
