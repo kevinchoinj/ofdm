@@ -72,9 +72,13 @@ export default class Keynotesect extends React.Component{
 
     }
 
+    const container={
+      marginBottom:"50px",
+    }
+
 	  return(
 
-      <div>
+      <div style={container}>
         <Row>
         <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
         <div style={title} onClick={this.toggledisplay}> 
