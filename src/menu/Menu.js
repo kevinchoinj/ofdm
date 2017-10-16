@@ -30,11 +30,13 @@ export default class Menu extends React.Component{
       mobileopac2:"0",
       mobileopac3:"0",
       mobileopac4:"0",
+      mobileopac5:"0",
 
       mobileoffset1:"-100%",
       mobileoffset2:"-100%",
       mobileoffset3:"-100%",
       mobileoffset4:"-100%",
+      mobileoffset5:"-100%",
     }
     this.checkscreen = this.checkscreen.bind(this);
 
@@ -78,6 +80,7 @@ export default class Menu extends React.Component{
       setTimeout(function() { this.setState({mobileopac2:"1", mobileoffset2:"0px"}); }.bind(this), 150);
       setTimeout(function() { this.setState({mobileopac3:"1", mobileoffset3:"0px"}); }.bind(this), 300);
       setTimeout(function() { this.setState({mobileopac4:"1", mobileoffset4:"0px"}); }.bind(this), 450);
+      setTimeout(function() { this.setState({mobileopac5:"1", mobileoffset5:"0px"}); }.bind(this), 600);
     }
     else if(this.state.lineanim3 ==="0px"){
       this.setState({
@@ -93,11 +96,13 @@ export default class Menu extends React.Component{
          mobileopac2:"0",
          mobileopac3:"0",
          mobileopac4:"0",
+         mobileopac5:"0",
 
          mobileoffset1:"-100%",
          mobileoffset2:"-100%",
          mobileoffset3:"-100%",
          mobileoffset4:"-100%",
+         mobileoffset5:"-100%",
       });
     }
   }
@@ -252,10 +257,12 @@ export default class Menu extends React.Component{
           mobileopac2={this.state.mobileopac2}
           mobileopac3={this.state.mobileopac3}
           mobileopac4={this.state.mobileopac4}
+          mobileopac5={this.state.mobileopac5}
           mobileoffset1={this.state.mobileoffset1}
           mobileoffset2={this.state.mobileoffset2}
           mobileoffset3={this.state.mobileoffset3}
           mobileoffset4={this.state.mobileoffset4}
+          mobileoffset5={this.state.mobileoffset5}
           />
     </Row>
     </div>

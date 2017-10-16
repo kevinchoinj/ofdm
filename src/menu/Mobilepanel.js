@@ -113,6 +113,21 @@ checkresize(){
       transition:".5s ease-out",
       top:this.props.mobileoffset4,
     }
+    const opacstyle5={
+      color:"#fff",
+      fontFamily:"Roboto, Helvetica",
+      fontSize:"36px",
+      letterSpacing:".5px",
+      lineHeight:"200%",
+      position:"absolute",
+
+      opacity: this.props.mobileopac5,
+      WebkitTransition: ".5s ease-out",
+      MozTransition: ".5s ease-out",
+      OTransition: ".5s ease-out",
+      transition:".5s ease-out",
+      top:this.props.mobileoffset5,
+    }
 
     const optioncont={
       position:"relative",
@@ -138,17 +153,24 @@ checkresize(){
               Instructions
             </span>
           </div>
+        </Link>        
+        <Link to='/schedule' onClick={this.props.gotop}>
+        <div style={optioncont} onClick={this.props.toggler}>
+            <span style={opacstyle3}>
+              Schedule
+            </span>
+          </div>
         </Link>
         <Link to='/past' onClick={this.props.gotop}>
         <div style={optioncont} onClick={this.props.toggler}>
-            <span style={opacstyle3}>
+            <span style={opacstyle4}>
               Past Seminars
             </span>
           </div>
         </Link>
         <Link to='/keynotes' onClick={this.props.gotop}>
         <div style={optioncont} onClick={this.props.toggler}>
-            <span style={opacstyle4}>
+            <span style={opacstyle5}>
               Keynotes
             </span>
           </div>
