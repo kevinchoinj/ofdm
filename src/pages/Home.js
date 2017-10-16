@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Article from '../home/Article';
 import image1 from '../images/4.png';
 
 import {Row, Col} from 'react-bootstrap';

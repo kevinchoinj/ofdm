@@ -68,16 +68,18 @@ pageiskeynote(){
 }
 
 togglecolors(){
+  /*default light mode*/
   if(this.state.color1==="rgba(26,26,26,1)"){
     this.setState({
       color1:"rgba(255,255,255,1)",
       color2:"rgba(26,26,26,1)",
     })
   }
+  /*dark mode*/
   else{
     this.setState({
       color1:"rgba(26,26,26,1)",
-      color2:"rgba(255,255,255,1)",
+      color2:"rgba(200,200,200,1)",
     })
   }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import Article from '../home/Article';
 
 import image1 from '../images/2.jpeg';
 
@@ -25,6 +24,7 @@ export default class Instructions extends React.Component{
       letterSpacing:".5px",
       lineHeight:"150%",
       color:this.props.color2,
+      marginBottom:"50px",
     }
 
     const sideimage={

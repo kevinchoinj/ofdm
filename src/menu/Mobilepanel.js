@@ -8,6 +8,7 @@ constructor(props){
   super(props);
   this.state=({
     menudisplay:"block"
+    
   })
   this.checkresize = this.checkresize.bind(this)
 }
@@ -51,22 +52,107 @@ checkresize(){
       paddingTop:"100px",
 
     }
-    const mobileoption={
+
+    const opacstyle1={
       color:"#fff",
       fontFamily:"Roboto, Helvetica",
       fontSize:"36px",
       letterSpacing:".5px",
       lineHeight:"200%",
+      position:"absolute",
 
+      opacity: this.props.mobileopac1,
+      WebkitTransition: ".5s ease-out",
+      MozTransition: ".5s ease-out",
+      OTransition: ".5s ease-out",
+      transition:".5s ease-out",
+      top:this.props.mobileoffset1,
     }
+    const opacstyle2={
+      color:"#fff",
+      fontFamily:"Roboto, Helvetica",
+      fontSize:"36px",
+      letterSpacing:".5px",
+      lineHeight:"200%",
+      position:"absolute",
+
+      opacity: this.props.mobileopac2,
+      WebkitTransition: ".5s ease-out",
+      MozTransition: ".5s ease-out",
+      OTransition: ".5s ease-out",
+      transition:".5s ease-out",
+      top:this.props.mobileoffset2,
+    }
+    const opacstyle3={
+      color:"#fff",
+      fontFamily:"Roboto, Helvetica",
+      fontSize:"36px",
+      letterSpacing:".5px",
+      lineHeight:"200%",
+      position:"absolute",
+
+      opacity: this.props.mobileopac3,
+      WebkitTransition: ".5s ease-out",
+      MozTransition: ".5s ease-out",
+      OTransition: ".5s ease-out",
+      transition:".5s ease-out",
+      top:this.props.mobileoffset3,
+    }
+    const opacstyle4={
+      color:"#fff",
+      fontFamily:"Roboto, Helvetica",
+      fontSize:"36px",
+      letterSpacing:".5px",
+      lineHeight:"200%",
+      position:"absolute",
+
+      opacity: this.props.mobileopac4,
+      WebkitTransition: ".5s ease-out",
+      MozTransition: ".5s ease-out",
+      OTransition: ".5s ease-out",
+      transition:".5s ease-out",
+      top:this.props.mobileoffset4,
+    }
+
+    const optioncont={
+      position:"relative",
+      height:"60px",
+      overflow: "hidden",
+      width:"100%",
+    }
+
     return(
       <div style={panel}>
       <Row>
         <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-        <Link to='/' onClick={this.props.gotop}><div style={mobileoption} onClick={this.props.toggler}>Home</div></Link>
-        <Link to='/instructions' onClick={this.props.gotop}><div style={mobileoption} onClick={this.props.toggler}>Instructions</div></Link>
-        <Link to='/past' onClick={this.props.gotop}><div style={mobileoption} onClick={this.props.toggler}>Past Seminars</div></Link>
-        <Link to='/keynotes' onClick={this.props.gotop}><div style={mobileoption} onClick={this.props.toggler}>Keynotes</div></Link>
+        <Link to='/' onClick={this.props.gotop}>
+          <div style={optioncont} onClick={this.props.toggler}>
+            <span style={opacstyle1}>
+              Home
+            </span>
+          </div>
+        </Link>
+        <Link to='/instructions' onClick={this.props.gotop}>
+        <div style={optioncont} onClick={this.props.toggler}>
+            <span style={opacstyle2}>
+              Instructions
+            </span>
+          </div>
+        </Link>
+        <Link to='/past' onClick={this.props.gotop}>
+        <div style={optioncont} onClick={this.props.toggler}>
+            <span style={opacstyle3}>
+              Past Seminars
+            </span>
+          </div>
+        </Link>
+        <Link to='/keynotes' onClick={this.props.gotop}>
+        <div style={optioncont} onClick={this.props.toggler}>
+            <span style={opacstyle4}>
+              Keynotes
+            </span>
+          </div>
+        </Link>
         </Col>
        </Row>
       </div>

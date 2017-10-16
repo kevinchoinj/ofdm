@@ -9,7 +9,7 @@ export default class Colortoggle extends React.Component{
   }
 
   togglethis(){
-    if (this.props.color1 == "rgba(255,255,255,1)"){
+    if (this.props.color1 === "rgba(255,255,255,1)"){
       this.setState({
         offset: "calc(100% - 25px)",
       });
@@ -24,8 +24,8 @@ export default class Colortoggle extends React.Component{
 
     const wrapper={
       position:"fixed",
-      bottom:"25px",
-      right:"25px",
+      bottom:"15px",
+      right:"15px",
       zIndex:"101",
       cursor:"pointer",
     }

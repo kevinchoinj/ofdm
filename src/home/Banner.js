@@ -1,6 +1,5 @@
 import React from 'react';
 import {Col} from 'react-bootstrap';
-import logo from '../images/englogo.png';
 
 export default class Banner extends React.Component{
 
@@ -83,16 +82,9 @@ export default class Banner extends React.Component{
       color:this.props.color2,
     }
 
-    const logostyle={
-      bottom:"0px",
-      right:"0px",
-      position:"absolute",
-      maxWidth:"100%",
-    }
     return(
       <div>
       <div style={banner}>
-        {/* <img src={logo} style={logostyle}/> */}
       </div>
 
         

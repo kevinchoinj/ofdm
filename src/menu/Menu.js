@@ -2,8 +2,6 @@ import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
-import img1 from '../images/1.png';
-
 import Mobilebutton from './Mobilebutton';
 import Menuopt from './Menuoption';
 import Mobilepanel from './Mobilepanel';
@@ -27,6 +25,16 @@ export default class Menu extends React.Component{
       mobileoffset:"-100vw",
 
       btncolor:"#1a1a1a",
+
+      mobileopac1:"0",
+      mobileopac2:"0",
+      mobileopac3:"0",
+      mobileopac4:"0",
+
+      mobileoffset1:"-100%",
+      mobileoffset2:"-100%",
+      mobileoffset3:"-100%",
+      mobileoffset4:"-100%",
     }
     this.checkscreen = this.checkscreen.bind(this);
 
@@ -66,6 +74,10 @@ export default class Menu extends React.Component{
          mobileoffset:"0px",
          btncolor:"#fff",
       });
+      setTimeout(function() { this.setState({mobileopac1:"1", mobileoffset1:"0px"}); }.bind(this), 0);
+      setTimeout(function() { this.setState({mobileopac2:"1", mobileoffset2:"0px"}); }.bind(this), 150);
+      setTimeout(function() { this.setState({mobileopac3:"1", mobileoffset3:"0px"}); }.bind(this), 300);
+      setTimeout(function() { this.setState({mobileopac4:"1", mobileoffset4:"0px"}); }.bind(this), 450);
     }
     else if(this.state.lineanim3 ==="0px"){
       this.setState({
@@ -76,6 +88,16 @@ export default class Menu extends React.Component{
          line2fromtop: "38px",
          mobileoffset:"-100vw",
          btncolor:"#1a1a1a",
+
+         mobileopac1:"0",
+         mobileopac2:"0",
+         mobileopac3:"0",
+         mobileopac4:"0",
+
+         mobileoffset1:"-100%",
+         mobileoffset2:"-100%",
+         mobileoffset3:"-100%",
+         mobileoffset4:"-100%",
       });
     }
   }
@@ -105,9 +127,7 @@ export default class Menu extends React.Component{
       WebkitBoxShadow: "0 2px 5px rgba(0,0,0,.4)",
 			MozBoxShadow: "0 2px 5px rgba(0,0,0,.4))",
       BoxShadow: "0 2px 5px rgba(0,0,0,.4)",
-      backgroundColor:"#fff",
 
-      
       backgroundColor:this.props.color1,
       fontFamily:"Roboto, Helvetica",
       zIndex:"4",
@@ -138,25 +158,7 @@ export default class Menu extends React.Component{
       fontWeight:"bold",
     }
 
-    const menuoptionselect={
-      display: this.state.displaywide,
-      textAlign:"center",
-      marginTop:"30px",
-      fontSize:"16px",
 
-      top:this.props.offset,
-      WebkitTransition: ".5s ease-out",
-      MozTransition: ".5s ease-out",
-      OTransition: ".5s ease-out",
-      transition:".5s ease-out",
-
-      fontWeight:"bold",
-
-      background: 'url('+img1+')',
-			backgroundRepeat: "no-repeat",
-			backgroundPosition: "center center",
-      backgroundSize: "cover",
-    }
 
     const logostyle={
       maxWidth:"100%",
@@ -179,10 +181,10 @@ export default class Menu extends React.Component{
       <Col md={10} mdOffset={1} sm={12} smOffset={0} xs={12} xsOffset={0} style={menucontainer}>
         <Row>
         <Link to='/'><Col md={3} mdOffset={0} sm={3} smOffset={0} xs={12} xsOffset={0} style={title} onClick={this.gotop}>
-        {this.props.color2==="rgba(255,255,255,1)"?
-        <img src={logowhite} style={logostyle}/>
-        :
+        {this.props.color2==="rgba(26,26,26,1)"?
         <img src={logoimage} style={logostyle}/>
+        :
+        <img src={logowhite} style={logostyle}/>
       }
         
         </Col></Link>
@@ -235,7 +237,19 @@ export default class Menu extends React.Component{
             color1={this.props.color1} color2={this.props.color2}
           />
 
-          <Mobilepanel mobileoffset={this.state.mobileoffset} toggler={this.togglemenu} gotop={this.gotop}/>
+          <Mobilepanel 
+          mobileoffset={this.state.mobileoffset} 
+          toggler={this.togglemenu} 
+          gotop={this.gotop}
+          mobileopac1={this.state.mobileopac1}
+          mobileopac2={this.state.mobileopac2}
+          mobileopac3={this.state.mobileopac3}
+          mobileopac4={this.state.mobileopac4}
+          mobileoffset1={this.state.mobileoffset1}
+          mobileoffset2={this.state.mobileoffset2}
+          mobileoffset3={this.state.mobileoffset3}
+          mobileoffset4={this.state.mobileoffset4}
+          />
     </Row>
     </div>
     );
