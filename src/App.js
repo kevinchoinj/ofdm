@@ -12,12 +12,14 @@ import image1 from './images/uwloo2.jpg';
 import image2 from './images/uwloo1.jpg';
 import image3 from './images/uwloo3.jpg';
 import image4 from './images/uwloo4.jpg';
+import image5 from './images/uwloo5.jpg';
 
 import Home from './pages/Home';
 import Instructions from './pages/Instructions';
 import Past from './pages/Past';
 import Keynotes from './pages/Keynotes';
 import Backdrop from './components/Backdrop';
+import Schedule from './pages/Schedule';
 
 import Colortoggle from './components/Colortoggle';
 class App extends Component {
@@ -42,6 +44,7 @@ class App extends Component {
     this.pageisinstruct = this.pageisinstruct.bind(this)
     this.pageispast = this.pageispast.bind(this)
     this.pageiskeynote = this.pageiskeynote.bind(this)
+    this.pageisschedule = this.pageisschedule.bind(this)
 
     this.togglecolors = this.togglecolors.bind(this);
   }
@@ -64,6 +67,11 @@ pageispast(){
 pageiskeynote(){
   this.setState({
     currentpage:"keynotes"
+  })
+}
+pageisschedule(){
+  this.setState({
+    currentpage:"schedule"
   })
 }
 
@@ -185,6 +193,16 @@ togglecolors(){
 		        >Instructions</Banner>
 		      </div>
 		    )}/>
+        <Route exact path={"/schedule"} children={({ match }) => (
+		      <div>
+		        <Banner
+              opac={ Boolean(match) ? '1': '0'}
+              pointerevents={ Boolean(match) ? 'auto': 'none'}
+              bgimage={image5}
+              color1={this.state.color1} color2={this.state.color2}
+		        >Schedule</Banner>
+		      </div>
+		    )}/>
 
       <Route exact path={"/past"} children={({ match }) => (
 		      <div>
@@ -211,6 +229,7 @@ togglecolors(){
       <Switch>
       <Route exact path="/" render={(props) => <Home {...props} checkpage={this.pageishome} color1={this.state.color1} color2={this.state.color2}/>} />
       <Route exact path="/instructions" render={(props) => <Instructions {...props} checkpage={this.pageisinstruct} color1={this.state.color1} color2={this.state.color2}/>} />
+      <Route exact path="/schedule" render={(props) => <Schedule {...props} checkpage={this.pageisschedule} color1={this.state.color1} color2={this.state.color2}/>} />
       <Route exact path="/past" render={(props) => <Past {...props} checkpage={this.pageispast} color1={this.state.color1} color2={this.state.color2}/>} />
       <Route exact path="/keynotes" render={(props) => <Keynotes {...props} checkpage={this.pageiskeynote} color1={this.state.color1} color2={this.state.color2}/>} />
       

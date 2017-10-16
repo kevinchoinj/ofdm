@@ -191,28 +191,35 @@ export default class Menu extends React.Component{
         <Col md={9} sm={9} xs={9}>
         {
         this.props.currentpage==="home" ? 
-        <Link to='/'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px" color1={this.props.color1} color2={this.props.color2}>Home<div style={indic}></div></Menuopt></Col></Link>
+        <Link to='/'><Col md={2} mdOffset={1} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px" color1={this.props.color1} color2={this.props.color2}>Home<div style={indic}></div></Menuopt></Col></Link>
         :
-        <Link to='/'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px" color1={this.props.color1} color2={this.props.color2}>Home</Menuopt></Col></Link>
+        <Link to='/'><Col md={2} mdOffset={1} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px" color1={this.props.color1} color2={this.props.color2}>Home</Menuopt></Col></Link>
         }
         {
         this.props.currentpage==="instructions" ? 
-          <Link to='/instructions'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px" color1={this.props.color1} color2={this.props.color2}>Instructions<div style={indic}></div></Menuopt></Col></Link>
+          <Link to='/instructions'><Col md={2} style={menuoption} onClick={this.gotop}><Menuopt underwidth="86px" color1={this.props.color1} color2={this.props.color2}>Instructions<div style={indic}></div></Menuopt></Col></Link>
           :
-          <Link to='/instructions'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="62px" color1={this.props.color1} color2={this.props.color2}>Instructions</Menuopt></Col></Link>
+          <Link to='/instructions'><Col md={2} style={menuoption} onClick={this.gotop}><Menuopt underwidth="86px" color1={this.props.color1} color2={this.props.color2}>Instructions</Menuopt></Col></Link>
+        }
+                {
+          this.props.currentpage==="schedule"?
+          <Link to='/schedule'><Col md={2} style={menuoption} onClick={this.gotop}><Menuopt underwidth="70px" color1={this.props.color1} color2={this.props.color2}>Schedule<div style={indic}></div></Menuopt></Col></Link>
+          :
+          <Link to='/schedule'><Col md={2} style={menuoption} onClick={this.gotop}><Menuopt underwidth="70px" color1={this.props.color1} color2={this.props.color2}>Schedule</Menuopt></Col></Link>
         }
         {
           this.props.currentpage==="past"?
-          <Link to='/past'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="100px" color1={this.props.color1} color2={this.props.color2}>Past Seminars<div style={indic}></div></Menuopt></Col></Link>
+          <Link to='/past'><Col md={2} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px" color1={this.props.color1} color2={this.props.color2}>Past<div style={indic}></div></Menuopt></Col></Link>
           :
-          <Link to='/past'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="100px" color1={this.props.color1} color2={this.props.color2}>Past Seminars</Menuopt></Col></Link>
+          <Link to='/past'><Col md={2} style={menuoption} onClick={this.gotop}><Menuopt underwidth="40px" color1={this.props.color1} color2={this.props.color2}>Past</Menuopt></Col></Link>
         }
         {
           this.props.currentpage==="keynotes"?
-          <Link to='/keynotes'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="70px" color1={this.props.color1} color2={this.props.color2}>Keynotes<div style={indic}></div></Menuopt></Col></Link>
+          <Link to='/keynotes'><Col md={2} style={menuoption} onClick={this.gotop}><Menuopt underwidth="70px" color1={this.props.color1} color2={this.props.color2}>Keynotes<div style={indic}></div></Menuopt></Col></Link>
           :
-          <Link to='/keynotes'><Col md={3} style={menuoption} onClick={this.gotop}><Menuopt underwidth="70px" color1={this.props.color1} color2={this.props.color2}>Keynotes</Menuopt></Col></Link>
+          <Link to='/keynotes'><Col md={2} style={menuoption} onClick={this.gotop}><Menuopt underwidth="70px" color1={this.props.color1} color2={this.props.color2}>Keynotes</Menuopt></Col></Link>
         }
+
           
           
         </Col>

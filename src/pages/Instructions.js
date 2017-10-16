@@ -1,6 +1,8 @@
 import React from 'react';
 
 import image1 from '../images/2.jpeg';
+import Latex from '../abstracts/LatexTemplate.tex';
+import Word from '../abstracts/WordTemplate.rtf';
 
 import {Row, Col} from 'react-bootstrap';
 export default class Instructions extends React.Component{
@@ -46,8 +48,8 @@ export default class Instructions extends React.Component{
 
             <div style={content}>
             Please email abstracts to jejmcclu@uwaterloo.ca using the following templates: <br/>
-            (link LaTeX template)<br/>
-            (link Word template)<br/>
+            <strong><a href={Latex} download>LaTeX</a><br/></strong>
+            <strong><a href={Word} download>Word</a><br/></strong>
             The abstract must include your name, your supervisors name, the title of your presentation, and a maximum 1 page abstract.<br/>
             To allow sufficient time for putting together the meeting program and organizing the event, the deadline for submission of abstracts is set to November 1st, 2017.<br/>
             </div>
