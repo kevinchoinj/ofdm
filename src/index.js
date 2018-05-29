@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import {BrowserRouter as Router} from 'react-router-dom';
 
-ReactDOM.render(<Router>
+ReactDOM.render(<Router basename={'~jejmcclu'}>
   <App />
 </Router>, document.getElementById('root'));
 

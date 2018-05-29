@@ -8,7 +8,7 @@ import {Row, Col} from 'react-bootstrap';
 export default class Instructions extends React.Component{
 
   componentDidMount(){
-    this.props.checkpage(); 
+    this.props.checkpage();
   }
 
   render(){
@@ -67,11 +67,11 @@ export default class Instructions extends React.Component{
           </Col>
 
           <Col md={3} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-          <img src={image1} style={sideimage}/>
+          <img src={image1} style={sideimage} alt="sidebar instructions"/>
           </Col>
         </Row>
 
-        
+
       </div>
     );
   }

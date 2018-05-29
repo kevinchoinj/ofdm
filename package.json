@@ -2,6 +2,7 @@
   "name": "ofdm",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/~jejmcclu/",
   "dependencies": {
     "react": "^16.0.0",
     "react-bootstrap": "^0.31.3",

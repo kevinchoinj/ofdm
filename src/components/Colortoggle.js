@@ -31,13 +31,12 @@ export default class Colortoggle extends React.Component{
     }
     const btn={
       position:"relative",
-    height:"30px",
-    width:"65px",
-    backgroundColor:this.props.color1,
-    
-    borderRadius:"35px",
-    border:"3px solid "+this.props.color2,
-
+      height:"30px",
+      width:"65px",
+      backgroundColor:this.props.color1,
+      
+      borderRadius:"35px",
+      border:"3px solid "+this.props.color2,
     }
 
     const inner={

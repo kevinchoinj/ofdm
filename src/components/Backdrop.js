@@ -21,13 +21,13 @@ export default class Backdrop extends React.Component{
       <div style={backdrop}>
       <Col md={8} mdOffset={2} sm={10} smOffset={1} xs={12} xsOffset={0}>
         {this.props.color1==="rgba(26,26,26,1)"?
-        <img src={lightimage} style={imagestyle}/>
+        <img src={lightimage} style={imagestyle} alt="backdrop"/>
         :
-        <img src={darkimage} style={imagestyle}/>
+        <img src={darkimage} style={imagestyle} alt="backdrop"/>
     }
 
       </Col>
-    
+
       </div>
     );
   }

@@ -8,7 +8,7 @@ export default class Home extends React.Component{
 
 componentDidMount(){
 
-  this.props.checkpage(); 
+  this.props.checkpage();
 
 
 }
@@ -44,7 +44,7 @@ componentDidMount(){
 
         <Row>
           <Col md={6} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1} style={main}>
-         
+
           <div style={title}>
             2017
             </div>
@@ -52,14 +52,14 @@ componentDidMount(){
             <div style={content}>
             <strong>Date:</strong><br/>
             Thursday, November 9th, 2017<br/><br/>
-            
+
             <strong>Time:</strong><br/>
             9:00am - 1:30pm<br/><br/>
-            
+
             The department of Mechanical and Mechatronics Engineering Thermo-Fluids Fall Meeting brings together research groups working in thermo-fluids to give the opportunity for students to elevate the profile of their research, broaden their perspective in the field of thermo-fluids and generate discussion and interaction between research groups. Refreshments will be provided before and during the meeting, and lunch will be provided following the presentations.
           All thermo-fluids research groups are invited to submit abstracts and present their research at the meeting. Generally, a maximum of two presentations are allowed from each thermo-fluids research group to maintain diversity. A total of 10 presentation slots are available, with preference given to those who submitted abstracts first.
           </div>
-         
+
           </Col>
 
         <Col md={3} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
@@ -81,13 +81,13 @@ componentDidMount(){
             jejmcclu@uwaterloo.ca<br/>
             </div>
           </Col>
-          
+
         </Row>
 
         <Row>
           <Col md={8} mdOffset={2} sm={10} smOffset={1} xs={10} xsOffset={1} style={imagecontainer}>
-          <img src={image1} style={imagestyle}/>
-          </Col> 
+          <img src={image1} style={imagestyle} alt="home"/>
+          </Col>
           </Row>
       </div>
     );
