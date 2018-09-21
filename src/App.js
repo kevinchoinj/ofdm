@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 import './App.css';
+import 'styles/menu.css';
+
 import {Switch, Route} from 'react-router-dom';
 
 import Menu from './menu/Menu';
@@ -33,10 +35,10 @@ class App extends Component {
       menuheight:"80px",
       offset:"0px",
       currentpage:"",
-      
+
       color1:"rgba(255,255,255,1)",
       color2:"rgba(26,26,26,1)",
-      
+
     }
     this.checkscroll = this.checkscroll.bind(this)
 
@@ -105,7 +107,7 @@ togglecolors(){
        x: supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft,
        y: supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop
     };
-    
+
     this.setState({
       thisscroll:scroll.y,
     });
@@ -141,7 +143,7 @@ togglecolors(){
   }
 
   render() {
-    
+
     const placeholder={
       height:"100vh",
       width:"100%",
@@ -157,18 +159,18 @@ togglecolors(){
     }
 
     return (
-      
+
       <div className="App" style={appstyle}>
       <Backdrop color1={this.state.color1} color2={this.state.color2}/>
 
       <Colortoggle togglecolors={this.togglecolors}  color1={this.state.color1} color2={this.state.color2}/>
-      <Menu 
-        menuheight={this.state.menuheight} 
+      <Menu
+        menuheight={this.state.menuheight}
         offset={this.state.offset}
         currentpage={this.state.currentpage}
         color1={this.state.color1} color2={this.state.color2}
       />
-      
+
       <div style={placeholder}>
       </div>
       <Route exact path={"/"} children={({ match }) => (
@@ -232,7 +234,7 @@ togglecolors(){
       <Route exact path="/schedule" render={(props) => <Schedule {...props} checkpage={this.pageisschedule} color1={this.state.color1} color2={this.state.color2}/>} />
       <Route exact path="/past" render={(props) => <Past {...props} checkpage={this.pageispast} color1={this.state.color1} color2={this.state.color2}/>} />
       <Route exact path="/keynotes" render={(props) => <Keynotes {...props} checkpage={this.pageiskeynote} color1={this.state.color1} color2={this.state.color2}/>} />
-      
+
       </Switch>
         <Footer color1={this.state.color1} color2={this.state.color2}/>
       </div>
