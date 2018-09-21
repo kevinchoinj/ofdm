@@ -1,14 +1,16 @@
 import React from 'react';
-
-import image1 from '../images/2.jpeg';
-import Latex from '../abstracts/LatexTemplate.tex';
-import Word from '../abstracts/WordTemplate.rtf';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as pagesActions from 'actions/pages';
+import image1 from 'images/2.jpeg';
+import Latex from 'abstracts/LatexTemplate.tex';
+import Word from 'abstracts/WordTemplate.rtf';
 
 import {Row, Col} from 'react-bootstrap';
-export default class Instructions extends React.Component{
 
+class Instructions extends React.Component{
   componentDidMount(){
-    this.props.checkpage();
+    this.props.pagesActions.setPage("Instructions");
   }
 
   render(){
@@ -16,12 +18,10 @@ export default class Instructions extends React.Component{
       fontSize:"40px",
       fontWeight:"bold",
       marginBottom:"25px",
-      fontFamily:"Roboto, Helvetica",
       color:this.props.color2,
 
     }
     const content={
-      fontFamily:"Roboto, Helvetica",
       fontSize:"16px",
       letterSpacing:".5px",
       lineHeight:"150%",
@@ -76,3 +76,12 @@ export default class Instructions extends React.Component{
     );
   }
 }
+
+export default connect(
+  (state, ownProps) => ({
+    darkSetting: state.pages.darkSetting,
+  }),
+  dispatch => ({
+    pagesActions: bindActionCreators(pagesActions, dispatch),
+  }),
+)(Instructions);

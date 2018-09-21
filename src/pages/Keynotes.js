@@ -1,12 +1,16 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as pagesActions from 'actions/pages';
 
 import Keynotesect from '../past/Keynotesect';
 
 import {Row} from 'react-bootstrap';
-export default class Page1 extends React.Component{
+
+class Keynotes extends React.Component{
 
   componentDidMount(){
-    this.props.checkpage(); 
+    this.props.pagesActions.setPage("Keynotes");
   }
 
   render(){
@@ -14,7 +18,7 @@ export default class Page1 extends React.Component{
     return(
       <div>
         <Row>
-          
+
             <Keynotesect year="2015" color1={this.props.color1} color2={this.props.color2}>
             <strong>Keynote Session:</strong> Separation bubbles on airfoils and tonal noise production <br/><br/>
             <strong>Prof. Serhiy Yarusevych</strong><br/><br/>
@@ -43,9 +47,18 @@ export default class Page1 extends React.Component{
             <br/><br/>
             Finally, the high-amplitude pressure fluctuations within the turbulent boundary layer are investigated as the major acoustic source contributing to the trailing-edge noise. Three-dimensional measurement of the velocity field along with the evaluated pressure field demonstrated the correspondence of the positive and negative high-amplitude pressure peaks to the shear layers and vortical structures of the turbulent boundary layer, respectively. The results point out possible control strategies for trailing-edge noise attenuations.
             </Keynotesect>
-          
+
         </Row>
       </div>
     );
   }
 }
+
+export default connect(
+  (state, ownProps) => ({
+    darkSetting: state.pages.darkSetting,
+  }),
+  dispatch => ({
+    pagesActions: bindActionCreators(pagesActions, dispatch),
+  }),
+)(Keynotes);

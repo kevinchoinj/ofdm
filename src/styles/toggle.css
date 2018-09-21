@@ -1,0 +1,37 @@
+.toggle_wrapper {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 101;
+  cursor: pointer;
+}
+.toggle_button {
+  position: relative;
+  height: 30px;
+  width: 65px;
+  background-color: rgba(255,255,255,1);
+  border-radius: 35px;
+  border: 3px solid rgba(26,26,26,1);
+}
+.toggle_button--dark {
+  background-color: rgba(26,26,26,1);
+  border: 3px solid rgba(255,255,255,1);
+}
+.toggle_inner {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: rgba(26,26,26,1);
+  border-radius: 50%;
+  top: 2px;
+  right: calc(100% - 25px);
+
+  -webkit-transition: .5s ease-out;
+  -moz-transition: .5s ease-out;
+  -o-transition: .5s ease-out;
+  transition: .5s ease-out;
+}
+.toggle_inner--dark {
+  background-color: rgba(255,255,255,1);
+  right: 5px;
+}

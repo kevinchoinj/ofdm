@@ -1,9 +1,22 @@
 import React from 'react';
-export default class Instructions extends React.Component{
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as pagesActions from 'actions/pages';
+
+class Schedule extends React.Component{
   componentDidMount(){
-    this.props.checkpage();
+    this.props.pagesActions.setPage("Schedule");
   }
   render(){
     return null;
   }
 }
+
+export default connect(
+  (state, ownProps) => ({
+    darkSetting: state.pages.darkSetting,
+  }),
+  dispatch => ({
+    pagesActions: bindActionCreators(pagesActions, dispatch),
+  }),
+)(Schedule);

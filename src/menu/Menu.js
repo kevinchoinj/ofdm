@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import logoimage from '../images/englogoblk.png';
 import logowhite from '../images/englogo.png';
 import classNames from 'classnames';
+import MenuOption from 'menu/MenuOption';
 
 class Menu extends React.Component{
 
@@ -21,6 +22,7 @@ class Menu extends React.Component{
 
     const {
       darkSetting,
+      currentPage,
     } = this.props;
 
     const wrapperName = classNames({
@@ -28,69 +30,33 @@ class Menu extends React.Component{
       'menu_wrapper--dark': darkSetting,
     });
 
+    const menuValues = [
+      {optionText: 'Home', optionLink: '/', selected: currentPage==="Home"},
+      {optionText: 'Instructions', optionLink: '/instructions', selected: currentPage==="Instructions"},
+      {optionText: 'Schedule', optionLink: '/schedule', selected: currentPage==="Schedule"},
+      {optionText: 'Past', optionLink: '/past', selected: currentPage==="Past"},
+      {optionText: 'Keynotes', optionLink: '/keynotes', selected: currentPage==="Keynotes"},
+    ]
+
     return(
       <div className={wrapperName}>
-
         <div className="menu_title"  onClick={this.goTop}>
-        <Link to='/' className="menu_logo">
-          <img src={logoimage} className="menu_logo" alt="logo"/>
+          <Link to='/' className="menu_logo">
+            {darkSetting?
+            <img src={logowhite} className="menu_logo" alt="logo"/>:
+            <img src={logoimage} className="menu_logo" alt="logo"/>
+            }
           </Link>
         </div>
-
-        <div className="menu_option__wrapper"  onClick={this.goTop}>
-          <Link to='/' className="menu_link">
-            <div className="menu_option">
-              <div className="menu_option__text">
-                Home
-                <div className="menu_option__under"/>
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        <div className="menu_option__wrapper"  onClick={this.goTop}>
-          <Link to='/instructions' className="menu_link">
-            <div className="menu_option">
-              <div className="menu_option__text">
-                Instructions
-                <div className="menu_option__under"/>
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        <div className="menu_option__wrapper"  onClick={this.goTop}>
-          <Link to='/schedule' className="menu_link">
-            <div className="menu_option">
-              <div className="menu_option__text">
-              Schedule
-                <div className="menu_option__under"/>
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        <div className="menu_option__wrapper"  onClick={this.goTop}>
-          <Link to='/past' className="menu_link">
-            <div className="menu_option">
-              <div className="menu_option__text">
-              Past
-                <div className="menu_option__under"/>
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        <div className="menu_option__wrapper"  onClick={this.goTop}>
-          <Link to='/keynotes' className="menu_link">
-            <div className="menu_option">
-              <div className="menu_option__text">
-              Keynotes
-                <div className="menu_option__under"/>
-              </div>
-            </div>
-          </Link>
-        </div>
+        {menuValues.map((value, index)=>(
+          <div key={index} className="menu_option__wrapper" onClick={this.goTop}>
+            <MenuOption
+              optionText={value.optionText}
+              optionLink={value.optionLink}
+              selected={value.selected}
+            />
+          </div>
+        ))}
 
       </div>
     );
@@ -100,6 +66,7 @@ class Menu extends React.Component{
 export default connect(
   (state, ownProps) => ({
     darkSetting: state.pages.darkSetting,
+    currentPage: state.pages.currentPage,
   }),
   dispatch => ({
   }),

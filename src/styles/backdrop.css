@@ -1,0 +1,28 @@
+.backdrop {
+  position: fixed;
+  opacity: .1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.backdrop_image__container {
+  width: 75%;
+}
+.backdrop_image {
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .backdrop_image__container {
+    width: 83.33333333%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .backdrop_image__container {
+    width: 100%;
+  }
+}

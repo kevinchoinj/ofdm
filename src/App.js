@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 
 import './App.css';
 import 'styles/menu.css';
+import 'styles/backdrop.css';
+import 'styles/home.css';
+import 'styles/toggle.css';
+import 'styles/background.css';
 
 import {Switch, Route} from 'react-router-dom';
 
 import Menu from './menu/Menu';
 import Footer from './components/Footer';
-
 
 import Banner from './home/Banner';
 import image1 from './images/uwloo2.jpg';
@@ -22,6 +25,8 @@ import Past from './pages/Past';
 import Keynotes from './pages/Keynotes';
 import Backdrop from './components/Backdrop';
 import Schedule from './pages/Schedule';
+
+import Background from 'components/Background';
 
 import Colortoggle from './components/Colortoggle';
 class App extends Component {
@@ -161,7 +166,8 @@ togglecolors(){
     return (
 
       <div className="App" style={appstyle}>
-      <Backdrop color1={this.state.color1} color2={this.state.color2}/>
+      <Background/>
+      <Backdrop/>
 
       <Colortoggle togglecolors={this.togglecolors}  color1={this.state.color1} color2={this.state.color2}/>
       <Menu
