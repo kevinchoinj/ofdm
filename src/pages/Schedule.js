@@ -2,13 +2,33 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as pagesActions from 'actions/pages';
+import * as scrollActions from 'actions/scroll';
+import Scrollbar from 'smooth-scrollbar';
+import bannerImage from 'images/uwloo5.jpg';
+import Banner from 'home/Banner';
 
 class Schedule extends React.Component{
-  componentDidMount(){
+	componentDidMount() {
     this.props.pagesActions.setPage("Schedule");
+		this.props.scrollActions.checkScroll(0);
+		const scrollbar = Scrollbar.init(document.querySelector('#schedule_wrapper'), {
+			alwaysShowTracks: true,
+			syncCallbacks: true,
+		});
+		scrollbar.addListener(({ offset }) => {
+      this.props.scrollActions.checkScroll(offset.y);
+    });
   }
   render(){
-    return null;
+    return (
+      <div id="schedule_wrapper">
+        <Banner
+          bgimage={bannerImage}
+        >
+          Schedule
+        </Banner>
+      </div>
+    );
   }
 }
 
@@ -18,5 +38,6 @@ export default connect(
   }),
   dispatch => ({
     pagesActions: bindActionCreators(pagesActions, dispatch),
+    scrollActions: bindActionCreators(scrollActions, dispatch),
   }),
 )(Schedule);

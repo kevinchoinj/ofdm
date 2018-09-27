@@ -3,6 +3,11 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as pagesActions from 'actions/pages';
 
+import * as scrollActions from 'actions/scroll';
+import Scrollbar from 'smooth-scrollbar';
+import bannerImage from 'images/uwloo4.jpg';
+import Banner from 'home/Banner';
+
 import YearSection from '../past/YearSection';
 
 import AjithAirody2015 from '../abstracts/2015/AjithAirody.pdf';
@@ -37,9 +42,26 @@ import YusukeKoda2012 from '../abstracts/2012/YusukeKoda.pdf';
 
 class Past extends React.Component{
 
-  componentDidMount(){
+
+	componentDidMount() {
     this.props.pagesActions.setPage("Past");
+		this.props.scrollActions.checkScroll(0);
+		const scrollbar = Scrollbar.init(document.querySelector('#past_wrapper'), {
+			alwaysShowTracks: true,
+			syncCallbacks: true,
+		});
+		scrollbar.addListener(({ offset }) => {
+      this.props.scrollActions.checkScroll(offset.y);
+    });
+    this.scrollbar=scrollbar;
   }
+
+  toggleDisplay = (key) => {
+    this.props.pagesActions.toggleSection(key);
+    let scroller = this.scrollbar;
+    setTimeout(function(){scroller.update()}, 500);
+  }
+
 
   render(){
 
@@ -48,9 +70,14 @@ class Past extends React.Component{
     }
 
     return(
-      <div>
-
+      <div id="past_wrapper">
+        <Banner
+          bgimage={bannerImage}
+        >
+          Past Years
+        </Banner>
           <YearSection
+          toggleDisplay = {this.toggleDisplay}
           year="2015"
           organizer="Jeff McClure"
           date="Wednesday, October 28, 2015"
@@ -98,7 +125,8 @@ class Past extends React.Component{
 
         </YearSection>
 
-          <YearSection year="2013"
+          <YearSection
+          toggleDisplay = {this.toggleDisplay} year="2013"
           organizer="Chris Morton"
           date="Thursday, October 23, 2013"
           time="10:00am - 2:00pm"
@@ -137,7 +165,8 @@ class Past extends React.Component{
           Advisor: Dr. Cecile Devaud<br/><br/>
         </YearSection>
 
-          <YearSection year="2012"
+          <YearSection
+          toggleDisplay = {this.toggleDisplay} year="2012"
           organizer="Chris Morton"
           date="Thursday, October 26, 2012"
           time="10:00am - 2:00pm"
@@ -188,7 +217,8 @@ class Past extends React.Component{
         </YearSection>
 
 
-          <YearSection year="2011"
+          <YearSection
+          toggleDisplay = {this.toggleDisplay} year="2011"
           organizer="Chris Morton"
           date="Thursday, October 27, 2011"
           time="10:00am - 2:00pm"
@@ -257,6 +287,7 @@ export default connect(
     darkSetting: state.pages.darkSetting,
   }),
   dispatch => ({
+    scrollActions: bindActionCreators(scrollActions, dispatch),
     pagesActions: bindActionCreators(pagesActions, dispatch),
   }),
 )(Past);

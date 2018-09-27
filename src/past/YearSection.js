@@ -29,7 +29,7 @@ class YearSection extends React.Component{
 
       <div className="past_wrapper">
         <div className="past_left">
-          <div className="page_title pointer" onClick={()=>this.toggleDisplay(date)}>
+          <div className="page_title pointer" onClick={()=>this.props.toggleDisplay(date)}>
             {year}
             <SectionButton
               name={date}

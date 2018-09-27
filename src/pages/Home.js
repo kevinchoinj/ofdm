@@ -2,18 +2,34 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as pagesActions from 'actions/pages';
-
-import image1 from '../images/4.png';
+import * as scrollActions from 'actions/scroll';
+import Scrollbar from 'smooth-scrollbar';
+import image1 from 'images/4.png';
+import Banner from 'home/Banner';
+import bannerImage from 'images/uwloo2.jpg';
 
 class Home extends React.Component{
 
-  componentDidMount(){
+	componentDidMount() {
     this.props.pagesActions.setPage("Home");
+		this.props.scrollActions.checkScroll(0);
+		const scrollbar = Scrollbar.init(document.querySelector('#home_wrapper'), {
+			alwaysShowTracks: true,
+			syncCallbacks: true,
+		});
+		scrollbar.addListener(({ offset }) => {
+      this.props.scrollActions.checkScroll(offset.y);
+    });
   }
 
   render(){
     return(
-      <div>
+      <div id="home_wrapper">
+        <Banner
+          bgimage={bannerImage}
+        >
+          Thermo-Fluids Fall Meeting
+        </Banner>
         <div className="home_body">
           <div className="home_left">
             <div className="home_title">
@@ -70,5 +86,6 @@ export default connect(
   }),
   dispatch => ({
     pagesActions: bindActionCreators(pagesActions, dispatch),
+    scrollActions: bindActionCreators(scrollActions, dispatch),
   }),
 )(Home);

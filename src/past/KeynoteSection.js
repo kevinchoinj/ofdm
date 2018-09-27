@@ -22,7 +22,7 @@ class Keynotesect extends React.Component{
 
 	  return(
       <div>
-        <div className="keynotes_header" onClick={()=>this.toggleDisplay(year)}>
+        <div className="keynotes_header" onClick={()=>this.props.toggleDisplay(year)}>
           <strong>
             {year}
           </strong>
