@@ -2,7 +2,9 @@ body {
   font-family: 'Roboto', Helvetica, sans-serif;
 }
 
-
+.pointer {
+  cursor: pointer;
+}
 .row{
   margin-left:0px;
   margin-right:0px;

@@ -3,9 +3,14 @@ import React, { Component } from 'react';
 import './App.css';
 import 'styles/menu.css';
 import 'styles/backdrop.css';
-import 'styles/home.css';
 import 'styles/toggle.css';
 import 'styles/background.css';
+
+import 'styles/pages.css';
+import 'styles/home.css';
+import 'styles/instructions.css';
+import 'styles/keynotes.css';
+import 'styles/past.css';
 
 import {Switch, Route} from 'react-router-dom';
 
@@ -29,6 +34,7 @@ import Schedule from './pages/Schedule';
 import Background from 'components/Background';
 
 import Colortoggle from './components/Colortoggle';
+
 class App extends Component {
   constructor(props) {
     super(props);

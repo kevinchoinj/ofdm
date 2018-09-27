@@ -2,6 +2,7 @@ import {
   SET_PAGE,
   TOGGLE_MENU,
   TOGGLE_DARK,
+  TOGGLE_SECTION
 } from 'actions/pages'
 
 const DEFAULT_STATE={
@@ -9,6 +10,7 @@ const DEFAULT_STATE={
   triangleDisplayed: false,
   menuDisplayed: false,
   darkSetting: false,
+  sectionsDisplayed: {},
 }
 
 export default(state=DEFAULT_STATE, payload)=>
@@ -20,6 +22,15 @@ export default(state=DEFAULT_STATE, payload)=>
       return {...state, menuDisplayed: payload.menuDisplayed};
     case TOGGLE_DARK:
       return {...state, darkSetting: payload.darkSetting};
+    case TOGGLE_SECTION:
+      Object.keys(state.sectionsDisplayed).forEach(v => v !== payload.key? state.sectionsDisplayed[v] = false : null);
+      return {
+        ...state,
+        sectionsDisplayed: {
+          ...state.sectionsDisplayed,
+          [payload.key]: !state.sectionsDisplayed[payload.key],
+        }
+      };
     default:
       return state;
   }

@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as pagesActions from 'actions/pages';
 
-import Yearsect from '../past/Yearsect';
+import YearSection from '../past/YearSection';
 
 import AjithAirody2015 from '../abstracts/2015/AjithAirody.pdf';
 import DuyLee2015 from '../abstracts/2015/DuyLee.pdf';
@@ -50,7 +50,7 @@ class Past extends React.Component{
     return(
       <div>
 
-          <Yearsect
+          <YearSection
           year="2015"
           organizer="Jeff McClure"
           date="Wednesday, October 28, 2015"
@@ -96,9 +96,9 @@ class Past extends React.Component{
           Advisor: Prof. Carolyn Ren<br/><br/>
 
 
-        </Yearsect>
+        </YearSection>
 
-          <Yearsect year="2013"
+          <YearSection year="2013"
           organizer="Chris Morton"
           date="Thursday, October 23, 2013"
           time="10:00am - 2:00pm"
@@ -135,9 +135,9 @@ class Past extends React.Component{
           <a href={AmiraliAshrafizadeh2013} download style={dl}>A Jacobian-free Newton-Krylov method applied to multi-phase flows</a> <br/>
           Amirali Ashrafizadeh <br/>
           Advisor: Dr. Cecile Devaud<br/><br/>
-        </Yearsect>
+        </YearSection>
 
-          <Yearsect year="2012"
+          <YearSection year="2012"
           organizer="Chris Morton"
           date="Thursday, October 26, 2012"
           time="10:00am - 2:00pm"
@@ -185,10 +185,10 @@ class Past extends React.Component{
           <a href={FangLiu2012} download style={dl}>Extraction of 5-HMF using mixed solvents from simulated hydrothermal conversion product</a> <br/>
           Fang Liu<br/>
           Advisor: Prof. Zhongchao Tan<br/><br/>
-        </Yearsect>
+        </YearSection>
 
 
-          <Yearsect year="2011"
+          <YearSection year="2011"
           organizer="Chris Morton"
           date="Thursday, October 27, 2011"
           time="10:00am - 2:00pm"
@@ -242,7 +242,7 @@ class Past extends React.Component{
           <strong>Hydrothermal conversion of biomass into value-add chemical 5-HMF</strong> <br/>
           Fang Liu<br/>
           Advisor: Zhongchao Tan<br/><br/>
-        </Yearsect>
+        </YearSection>
 
 
 

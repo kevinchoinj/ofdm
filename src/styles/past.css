@@ -1,0 +1,14 @@
+.past_wrapper {
+  width: 83.33333333%;
+  margin-left: 8.33333333%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.past_left {
+  width: 66.666666666667%;
+}
+.past_right {
+  width: 25%;
+}

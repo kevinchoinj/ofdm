@@ -1,0 +1,33 @@
+.instructions_wrapper {
+  width: 83.33333333%;
+  margin-left: 8.33333333%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.instructions_text {
+  width: 66.666666666667%;
+}
+.instructions_image {
+  width: 25%;
+}
+.instructions_image img {
+  width: 100%;
+}
+.instructions_text {
+  font-size: 16px;
+  letter-spacing: .5px;
+  line-height: 150%;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 992px) {
+  .instructions_wrapper {
+    flex-direction: column;
+  }
+  .instructions_text,
+  .instructions_image {
+    width: 100%;
+  }
+
+}

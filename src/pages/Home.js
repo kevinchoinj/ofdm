@@ -16,25 +16,23 @@ class Home extends React.Component{
       <div>
         <div className="home_body">
           <div className="home_left">
-
             <div className="home_title">
               2017
             </div>
-
             <div>
               <strong>Date:</strong><br/>
-              Thursday, November 9th, 2017<br/><br/>
-
+              Thursday, November 9th, 2017
+              <br/><br/>
               <strong>Time:</strong><br/>
-              9:00am - 1:30pm<br/><br/>
-
+              9:00am - 1:30pm
+              <br/><br/>
               The department of Mechanical and Mechatronics Engineering Thermo-Fluids Fall Meeting brings together research groups working in thermo-fluids to give the opportunity for students to elevate the profile of their research, broaden their perspective in the field of thermo-fluids and generate discussion and interaction between research groups. Refreshments will be provided before and during the meeting, and lunch will be provided following the presentations.
               All thermo-fluids research groups are invited to submit abstracts and present their research at the meeting. Generally, a maximum of two presentations are allowed from each thermo-fluids research group to maintain diversity. A total of 10 presentation slots are available, with preference given to those who submitted abstracts first.
             </div>
           </div>
 
           <div className="home_right">
-            <div className="home_title">
+            <div className="page_title">
               Deadlines
             </div>
             <br/><br/>
