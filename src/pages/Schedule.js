@@ -6,6 +6,7 @@ import * as scrollActions from 'actions/scroll';
 import Scrollbar from 'smooth-scrollbar';
 import bannerImage from 'images/uwloo5.jpg';
 import Banner from 'home/Banner';
+import classNames from 'classnames';
 
 class Schedule extends React.Component{
 	componentDidMount() {
@@ -20,8 +21,18 @@ class Schedule extends React.Component{
     });
   }
   render(){
+
+    const {
+      darkSetting,
+    } = this.props;
+
+    const wrapperName = classNames({
+      'text_color': true,
+      'text_color--dark': darkSetting,
+    });
+
     return (
-      <div id="schedule_wrapper">
+      <div id="schedule_wrapper" className={wrapperName}>
         <Banner
           bgimage={bannerImage}
         >

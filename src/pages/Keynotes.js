@@ -8,6 +8,7 @@ import * as scrollActions from 'actions/scroll';
 import Scrollbar from 'smooth-scrollbar';
 import bannerImage from 'images/uwloo3.jpg';
 import Banner from 'home/Banner';
+import classNames from 'classnames';
 
 class Keynotes extends React.Component{
 
@@ -33,8 +34,17 @@ class Keynotes extends React.Component{
 
   render(){
 
+    const {
+      darkSetting,
+    } = this.props;
+
+    const wrapperName = classNames({
+      'text_color': true,
+      'text_color--dark': darkSetting,
+    });
+
     return(
-      <div id="keynotes_wrapper">
+      <div id="keynotes_wrapper" className={wrapperName}>
         <Banner
           bgimage={bannerImage}
         >

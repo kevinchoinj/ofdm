@@ -40,8 +40,9 @@ import JeffLabahn2012 from '../abstracts/2012/JeffLabahn.pdf';
 import RahelehGivehchi2012 from '../abstracts/2012/RahelehGivehchi.pdf';
 import YusukeKoda2012 from '../abstracts/2012/YusukeKoda.pdf';
 
-class Past extends React.Component{
+import classNames from 'classnames';
 
+class Past extends React.Component{
 
 	componentDidMount() {
     this.props.pagesActions.setPage("Past");
@@ -65,12 +66,17 @@ class Past extends React.Component{
 
   render(){
 
-    const dl={
-      fontWeight:"bold",
-    }
+    const {
+      darkSetting,
+    } = this.props;
+
+    const wrapperName = classNames({
+      'text_color': true,
+      'text_color--dark': darkSetting,
+    });
 
     return(
-      <div id="past_wrapper">
+      <div id="past_wrapper" className={wrapperName}>
         <Banner
           bgimage={bannerImage}
         >
@@ -85,40 +91,40 @@ class Past extends React.Component{
           place="E5-2004"
           color1={this.props.color1} color2={this.props.color2}
           >
-          <a href={HuangruiMo2015} download style={dl}>A ghost-cell immersed boundary method for complex and dynamic shock-particle interactions</a> <br/>
+          <a href={HuangruiMo2015} download>A ghost-cell immersed boundary method for complex and dynamic shock-particle interactions</a> <br/>
           Huangrui Mo<br/>
           Advisor: Prof. Fue-Sang Lien <br/><br/>
 
 
-          <a href={SepehrMohaddes2015} download style={dl}>A new technique for characterizing multi-temperature convection</a> <br/>
+          <a href={SepehrMohaddes2015} download>A new technique for characterizing multi-temperature convection</a> <br/>
           Sepehr Mohaddes<br/>
           Advisor: Prof. John Wright<br/><br/>
 
-          <a href={EugeneZivkov2015} download style={dl}>Experimental investigation of the interactions of a vortex dipole with a cantilevered plate</a> <br/>
+          <a href={EugeneZivkov2015} download>Experimental investigation of the interactions of a vortex dipole with a cantilevered plate</a> <br/>
           Eugene Zivkov<br/>
           Advisor: Prof. Sean Peterson and Prof. Serhiy Yarusevych<br/><br/>
 
-          <a href={DuyLee2015} download style={dl}>Assessment of the capabilities of FireFoam for simulations of large scale fire in confined compartments</a> <br/>
+          <a href={DuyLee2015} download>Assessment of the capabilities of FireFoam for simulations of large scale fire in confined compartments</a> <br/>
           Duy Le<br/>
           Advisor: Prof. Cecile Devaud<br/><br/>
 
-          <a href={PegahPezeshkpour2015} download style={dl}>Development and application of an improved model for microfluid transport in protein and DNA separation</a>  <br/>
+          <a href={PegahPezeshkpour2015} download>Development and application of an improved model for microfluid transport in protein and DNA separation</a>  <br/>
           Pegah Pezeshkpour<br/>
           Advisor: Prof. Gerry Schneider and Prof. Carolyn Ren<br/><br/>
 
-          <a href={AjithAirody2015} download style={dl}>Design optimization of a vaneless "fish-friendly" swirl injector small water turbines</a>  <br/>
+          <a href={AjithAirody2015} download>Design optimization of a vaneless "fish-friendly" swirl injector small water turbines</a>  <br/>
           Ajith Airody<br/>
           Advisor: Prof. Sean Peterson<br/><br/>
 
-          <a href={KevinLee2015} download style={dl}>Application of conditional source-term extimation (CSE) to a turbulent non-premixed methanol bluff-body flame</a>  <br/>
+          <a href={KevinLee2015} download>Application of conditional source-term extimation (CSE) to a turbulent non-premixed methanol bluff-body flame</a>  <br/>
           Kevin Lee<br/>
           Advisor: Prof. Cecile Devaud<br/><br/>
 
-          <a href={JeffreyMcClure2015} download style={dl}>Planar pressure PIV error optimization with applications to structural loading on a circular cylinder</a>  <br/>
+          <a href={JeffreyMcClure2015} download>Planar pressure PIV error optimization with applications to structural loading on a circular cylinder</a>  <br/>
           Jeffery McClure<br/>
           Advisor: Prof. Serhiy Yarusevych<br/><br/>
 
-          <a href={GurkanYesiloz2015} download style={dl}>High-throughput droplet sensing platform for pharmaceutical and bioengineering applications using microwave technology</a>  <br/>
+          <a href={GurkanYesiloz2015} download>High-throughput droplet sensing platform for pharmaceutical and bioengineering applications using microwave technology</a>  <br/>
           Gurkan Yesilov<br/>
           Advisor: Prof. Carolyn Ren<br/><br/>
 
@@ -133,34 +139,34 @@ class Past extends React.Component{
           place="E5-2004"
           color1={this.props.color1} color2={this.props.color2}
           >
-          <a href={BrianKettlewell2013} download style={dl}>Semi-analytical investigation of vortex shedding within the glottis an concomitant effect on vocal fold dynamics</a><br/>
+          <a href={BrianKettlewell2013} download>Semi-analytical investigation of vortex shedding within the glottis an concomitant effect on vocal fold dynamics</a><br/>
           Brian Kettlewell<br/>
           Advisor: Dr. Sean Peterson<br/><br/>
 
-          <a href={JenniferBook2013} download style={dl}>Investigating the impact of external leg compression on venous return to the heart</a><br/>
+          <a href={JenniferBook2013} download>Investigating the impact of external leg compression on venous return to the heart</a><br/>
           Jennifer Book<br/>
           Advisor: Dr. Sean Peterson<br/><br/>
 
-          <a href={JungyiWang2013} download style={dl}>Modelling and experiment of dying process of catalyst ink droplet</a> <br/>
+          <a href={JungyiWang2013} download>Modelling and experiment of dying process of catalyst ink droplet</a> <br/>
           Jingyi Wang<br/>
           Advisor: Dr. Xianguo Li<br/><br/>
 
-          <a href={GhobadAmini2013} download style={dl}>Optimum viscous flow in pressure-swirl atomizers</a> <br/>
+          <a href={GhobadAmini2013} download>Optimum viscous flow in pressure-swirl atomizers</a> <br/>
           Ghobad Amini<br/><br/>
 
-          <a href={ChrisMorton2013} download style={dl}>Tomographic PIV measurements in the wakes of cylindrical bodies</a> <br/>
+          <a href={ChrisMorton2013} download>Tomographic PIV measurements in the wakes of cylindrical bodies</a> <br/>
           Chris Morton<br/>
           Advisor: Dr. Serhiy Yarusevych<br/><br/>
 
-          <a href={NigelBinnema2013} download style={dl}>Use of HD Video to investigate stall on a wind turbine</a> <br/>
+          <a href={NigelBinnema2013} download>Use of HD Video to investigate stall on a wind turbine</a> <br/>
           Nigel Swytink-Binnema<br/>
           Advisor: Dr. David Johnson<br/><br/>
 
-          <a href={ManpreetBansal2013} download style={dl}>A flow visualization study of flow through a cluster of three equispaced cylinders at various orientation angles</a> <br/>
+          <a href={ManpreetBansal2013} download>A flow visualization study of flow through a cluster of three equispaced cylinders at various orientation angles</a> <br/>
           Manpreet Bansal<br/>
           Advisor: Dr. Serhiy Yarusevych<br/><br/>
 
-          <a href={AmiraliAshrafizadeh2013} download style={dl}>A Jacobian-free Newton-Krylov method applied to multi-phase flows</a> <br/>
+          <a href={AmiraliAshrafizadeh2013} download>A Jacobian-free Newton-Krylov method applied to multi-phase flows</a> <br/>
           Amirali Ashrafizadeh <br/>
           Advisor: Dr. Cecile Devaud<br/><br/>
         </YearSection>
@@ -172,46 +178,46 @@ class Past extends React.Component{
           time="10:00am - 2:00pm"
           place="E5-2004"
           color1={this.props.color1} color2={this.props.color2}>
-          <a href={HollyNeatby2012} download style={dl}>Developing a reliable method of estimating drag from far field measurements</a> <br/>
+          <a href={HollyNeatby2012} download>Developing a reliable method of estimating drag from far field measurements</a> <br/>
           Holly Neatby<br/>
           Advisor: Prof. Serhiy Yarusevych<br/><br/>
 
-          <a href={AhmedAbdelrahman2012} download style={dl}>Experimental measurement of wind turbine performance through blade element theory</a> <br/>
+          <a href={AhmedAbdelrahman2012} download>Experimental measurement of wind turbine performance through blade element theory</a> <br/>
           Ahmed Abdelrahman<br/>
           Advisor: Prof. David Johnson<br/><br/>
 
-          <a href={ChekemaPrince2012} download style={dl}>A CFD study of steady flow of a Newtonian and non-Newtonian fluid through a mildly curved tube
+          <a href={ChekemaPrince2012} download>A CFD study of steady flow of a Newtonian and non-Newtonian fluid through a mildly curved tube
           with stent-like wall protrusions patterns</a> <br/>
           Chekema Prince<br/>
           Advisor: Prof. Sean Peterson<br/><br/>
 
-          <a href={DavidSommer2012} download style={dl}>A coupled experimental-numerical framework for fluid-structure interaction studies:
+          <a href={DavidSommer2012} download>A coupled experimental-numerical framework for fluid-structure interaction studies:
            towards a pseudo-self-oscillating vocal fold facility</a> <br/>
           David Sommer<br/>
           Advisor: Prof. Sean Peterson<br/><br/>
 
-          <a href={JeffLabahn2012} download style={dl}>RANS simulation of a confined turbulent jet diffusion flame using conditional source estimation</a> <br/>
+          <a href={JeffLabahn2012} download>RANS simulation of a confined turbulent jet diffusion flame using conditional source estimation</a> <br/>
           Jeff Labahn<br/>
           Advisor: Prof. Cecile Devaud<br/><br/>
 
-          <a href={DominicMa2012} download style={dl}>Turbulent non-premixed combustion modeling using conditional moment closure including the effects of differential diffusion</a> <br/>
+          <a href={DominicMa2012} download>Turbulent non-premixed combustion modeling using conditional moment closure including the effects of differential diffusion</a> <br/>
           Dominic Man Ching Ma<br/>
           Advisor: Prof. Cecile Devaud<br/><br/>
 
-          <a href={FarzanMemarian2012} download style={dl}>Transient heat transfer effects in low-fluence Laser Induced Incandescence</a> <br/>
+          <a href={FarzanMemarian2012} download>Transient heat transfer effects in low-fluence Laser Induced Incandescence</a> <br/>
           Farzan Memarian<br/>
           Advisor: Prof. Kyle Daun<br/><br/>
 
-          <a href={YusukeKoda2012} download style={dl}>Implementation of the lattice Boltzmann method on the graphics processing unit</a> <br/>
+          <a href={YusukeKoda2012} download>Implementation of the lattice Boltzmann method on the graphics processing unit</a> <br/>
           Yusuke Koda<br/>
           Advisor: Prof. Fue Sang Lien<br/><br/>
 
-          <a href={RahelehGivehchi2012} download style={dl}>Indoor airborne nanoparticle measurement by Diffusive Charging (DC) and Aerodynamic
+          <a href={RahelehGivehchi2012} download>Indoor airborne nanoparticle measurement by Diffusive Charging (DC) and Aerodynamic
           Particle Focusing (APF): Characterization of the performance of the corona charger</a> <br/>
           Raheleh Givehchi<br/>
           Advisor: Prof. Zhongchao Tan<br/><br/>
 
-          <a href={FangLiu2012} download style={dl}>Extraction of 5-HMF using mixed solvents from simulated hydrothermal conversion product</a> <br/>
+          <a href={FangLiu2012} download>Extraction of 5-HMF using mixed solvents from simulated hydrothermal conversion product</a> <br/>
           Fang Liu<br/>
           Advisor: Prof. Zhongchao Tan<br/><br/>
         </YearSection>

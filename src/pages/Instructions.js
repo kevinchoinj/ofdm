@@ -9,6 +9,7 @@ import * as scrollActions from 'actions/scroll';
 import Scrollbar from 'smooth-scrollbar';
 import bannerImage from 'images/uwloo1.jpg';
 import Banner from 'home/Banner';
+import classNames from 'classnames';
 
 class Instructions extends React.Component{
 	componentDidMount() {
@@ -23,8 +24,18 @@ class Instructions extends React.Component{
     });
   }
   render(){
+
+    const {
+      darkSetting,
+    } = this.props;
+
+    const wrapperName = classNames({
+      'text_color': true,
+      'text_color--dark': darkSetting,
+    });
+
     return(
-      <div id="instructions_wrapper">
+      <div id="instructions_wrapper" className={wrapperName}>
         <Banner
           bgimage={bannerImage}
         >

@@ -26,10 +26,10 @@
   top: 2px;
   right: calc(100% - 25px);
 
-  -webkit-transition: .5s ease-out;
-  -moz-transition: .5s ease-out;
-  -o-transition: .5s ease-out;
-  transition: .5s ease-out;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition: .25s ease-out;
 }
 .toggle_inner--dark {
   background-color: rgba(255,255,255,1);

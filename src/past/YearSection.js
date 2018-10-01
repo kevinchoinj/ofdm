@@ -22,7 +22,7 @@ class YearSection extends React.Component{
     } = this.props;
 
     const sub={
-      maxHeight: sectionsDisplayed[date] ? this.refs.expand.scrollHeight : "0px",
+      maxHeight: sectionsDisplayed[date]  && this.refs.expand ? this.refs.expand.scrollHeight : "0px",
     }
 
 	  return(

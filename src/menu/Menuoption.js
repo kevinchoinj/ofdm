@@ -10,11 +10,18 @@ class MenuOption extends React.Component{
       selected,
       optionText,
       optionLink,
+      darkSetting,
     } = this.props;
 
     const indicatorName = classNames({
       'menu_indicator': true,
       'menu_indicator--selected': selected,
+      'menu_indicator--dark': darkSetting,
+    });
+
+    const linkName = classNames({
+      'menu_link': true,
+      'menu_link--dark': darkSetting,
     });
 
     return(
@@ -23,7 +30,7 @@ class MenuOption extends React.Component{
           <div className={indicatorName}/>
         </div>
         <div>
-          <Link to={optionLink} className="menu_link">
+          <Link to={optionLink} className={linkName}>
             <div className="menu_option">
               <div className="menu_option__text">
                 {optionText}

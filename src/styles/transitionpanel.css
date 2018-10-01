@@ -9,6 +9,9 @@
   height: 100vh;
   top: 0px;
   left: -100vw;
+  background-color: #fff;
+}
+.fourteen_panel__top--dark {
   background-color: #16191e;
 }
 .fourteen_panel__top--display {

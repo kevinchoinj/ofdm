@@ -12,6 +12,7 @@ import 'styles/instructions.css';
 import 'styles/keynotes.css';
 import 'styles/past.css';
 import 'styles/transitionpanel.css';
+import 'styles/menumobile.css';
 
 import {Switch, Route} from 'react-router-dom';
 import SiteRoutes from 'routes/SiteRoutes';

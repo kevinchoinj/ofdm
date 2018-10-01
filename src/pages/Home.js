@@ -7,6 +7,7 @@ import Scrollbar from 'smooth-scrollbar';
 import image1 from 'images/4.png';
 import Banner from 'home/Banner';
 import bannerImage from 'images/uwloo2.jpg';
+import classNames from 'classnames';
 
 class Home extends React.Component{
 
@@ -23,8 +24,18 @@ class Home extends React.Component{
   }
 
   render(){
+
+    const {
+      darkSetting,
+    } = this.props;
+
+    const wrapperName = classNames({
+      'text_color': true,
+      'text_color--dark': darkSetting,
+    });
+
     return(
-      <div id="home_wrapper">
+      <div id="home_wrapper" className={wrapperName}>
         <Banner
           bgimage={bannerImage}
         >

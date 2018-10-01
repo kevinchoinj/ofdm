@@ -8,7 +8,7 @@ constructor(props){
   super(props);
   this.state=({
     menudisplay:"block"
-    
+
   })
   this.checkresize = this.checkresize.bind(this)
 }
@@ -43,10 +43,10 @@ checkresize(){
       position:"fixed",
       top:"0px",
 
-      WebkitTransition: ".5s ease-out",
-      MozTransition: ".5s ease-out",
-      OTransition: ".5s ease-out",
-      transition:".5s ease-out",
+      WebkitTransition: ".25s ease-out",
+      MozTransition: ".25s ease-out",
+      OTransition: ".25s ease-out",
+      transition:".25s ease-out",
 
       zIndex:"6",
       paddingTop:"100px",
@@ -62,10 +62,10 @@ checkresize(){
       position:"absolute",
 
       opacity: this.props.mobileopac1,
-      WebkitTransition: ".5s ease-out",
-      MozTransition: ".5s ease-out",
-      OTransition: ".5s ease-out",
-      transition:".5s ease-out",
+      WebkitTransition: ".25s ease-out",
+      MozTransition: ".25s ease-out",
+      OTransition: ".25s ease-out",
+      transition:".25s ease-out",
       top:this.props.mobileoffset1,
     }
     const opacstyle2={
@@ -77,10 +77,10 @@ checkresize(){
       position:"absolute",
 
       opacity: this.props.mobileopac2,
-      WebkitTransition: ".5s ease-out",
-      MozTransition: ".5s ease-out",
-      OTransition: ".5s ease-out",
-      transition:".5s ease-out",
+      WebkitTransition: ".25s ease-out",
+      MozTransition: ".25s ease-out",
+      OTransition: ".25s ease-out",
+      transition:".25s ease-out",
       top:this.props.mobileoffset2,
     }
     const opacstyle3={
@@ -92,10 +92,10 @@ checkresize(){
       position:"absolute",
 
       opacity: this.props.mobileopac3,
-      WebkitTransition: ".5s ease-out",
-      MozTransition: ".5s ease-out",
-      OTransition: ".5s ease-out",
-      transition:".5s ease-out",
+      WebkitTransition: ".25s ease-out",
+      MozTransition: ".25s ease-out",
+      OTransition: ".25s ease-out",
+      transition:".25s ease-out",
       top:this.props.mobileoffset3,
     }
     const opacstyle4={
@@ -107,10 +107,10 @@ checkresize(){
       position:"absolute",
 
       opacity: this.props.mobileopac4,
-      WebkitTransition: ".5s ease-out",
-      MozTransition: ".5s ease-out",
-      OTransition: ".5s ease-out",
-      transition:".5s ease-out",
+      WebkitTransition: ".25s ease-out",
+      MozTransition: ".25s ease-out",
+      OTransition: ".25s ease-out",
+      transition:".25s ease-out",
       top:this.props.mobileoffset4,
     }
     const opacstyle5={
@@ -122,10 +122,10 @@ checkresize(){
       position:"absolute",
 
       opacity: this.props.mobileopac5,
-      WebkitTransition: ".5s ease-out",
-      MozTransition: ".5s ease-out",
-      OTransition: ".5s ease-out",
-      transition:".5s ease-out",
+      WebkitTransition: ".25s ease-out",
+      MozTransition: ".25s ease-out",
+      OTransition: ".25s ease-out",
+      transition:".25s ease-out",
       top:this.props.mobileoffset5,
     }
 
@@ -153,7 +153,7 @@ checkresize(){
               Instructions
             </span>
           </div>
-        </Link>        
+        </Link>
         <Link to='/schedule' onClick={this.props.gotop}>
         <div style={optioncont} onClick={this.props.toggler}>
             <span style={opacstyle3}>
