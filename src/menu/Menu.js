@@ -8,16 +8,6 @@ import MenuOption from 'menu/MenuOption';
 
 class Menu extends React.Component{
 
-  goTop = () => {
-    var scrollStep = -window.scrollY / (500 / 15),
-      scrollInterval = setInterval(function(){
-      if ( window.scrollY !== 0 ) {
-          window.scrollBy( 0, scrollStep );
-      }
-      else clearInterval(scrollInterval);
-  },15);
-  }
-
   render(){
 
     const {
@@ -40,7 +30,7 @@ class Menu extends React.Component{
 
     return(
       <div className={wrapperName}>
-        <div className="menu_title"  onClick={this.goTop}>
+        <div className="menu_title">
           <Link to='/' className="menu_logo">
             {darkSetting?
             <img src={logowhite} className="menu_logo" alt="logo"/>:
@@ -49,7 +39,7 @@ class Menu extends React.Component{
           </Link>
         </div>
         {menuValues.map((value, index)=>(
-          <div key={index} className="menu_option__wrapper" onClick={this.goTop}>
+          <div key={index} className="menu_option__wrapper">
             <MenuOption
               optionText={value.optionText}
               optionLink={value.optionLink}

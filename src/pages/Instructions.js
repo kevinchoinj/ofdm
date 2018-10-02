@@ -10,6 +10,7 @@ import Scrollbar from 'smooth-scrollbar';
 import bannerImage from 'images/uwloo1.jpg';
 import Banner from 'home/Banner';
 import classNames from 'classnames';
+import Footer from 'components/Footer';
 
 class Instructions extends React.Component{
 	componentDidMount() {
@@ -70,6 +71,7 @@ class Instructions extends React.Component{
             <img src={image1} alt="sidebar instructions"/>
           </div>
         </div>
+        <Footer/>
       </div>
     );
   }

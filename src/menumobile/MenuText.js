@@ -10,9 +10,11 @@ class MenuText extends React.Component{
     this.props.menuActions.toggleMenu(false);
   }
   render(){
+
     const {
       menuDisplay,
     } = this.props;
+
     const menuClassName = classNames(
       'twelve_menu_panel__links',
       {

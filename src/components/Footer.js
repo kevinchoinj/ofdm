@@ -1,46 +1,15 @@
 import React from 'react';
-import {Row,Col} from 'react-bootstrap';
-
 export default class Footer extends React.Component{
   render(){
-    const footer={
-      paddingTop:"50px",
-      marginTop:"50px",
-      width:"100%",
-      height: "260px",
-      bottom:"0px",
-      left:"0px",
-      right:"0px",
-      backgroundColor:"#000",
-      fontFamily:"Roboto, Helvetica",
-
-      color:"#ddd",
-    }
-
-    const title={
-      fontSize:"40px"
-    }
-
-    const info={
-      fontFamily:"Roboto, Helvetica",
-      fontSize:"16px",
-      letterSpacing:".5px",
-      lineHeight:"150%",
-    }
-
     return(
-      <div style={footer}>
-    <Row>
-      <Col md={10} mdOffset={1} sm={10} smOffset={1} xs={10} xsOffset={1}>
-      <div style={title}>
-      Contact for more information
-      </div>
-      <div style={info}>
-      jejmcclu@uwaterloo.ca<br/>
-      </div>
-      </Col>
-    </Row>
+      <div className="footer">
+        <div className="footer_title">
 
+        Contact for more information
+        </div>
+        <div>
+        jejmcclu@uwaterloo.ca<br/>
+        </div>
       </div>
     );
   }

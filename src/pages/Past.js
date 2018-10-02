@@ -41,6 +41,7 @@ import RahelehGivehchi2012 from '../abstracts/2012/RahelehGivehchi.pdf';
 import YusukeKoda2012 from '../abstracts/2012/YusukeKoda.pdf';
 
 import classNames from 'classnames';
+import Footer from 'components/Footer';
 
 class Past extends React.Component{
 
@@ -279,10 +280,7 @@ class Past extends React.Component{
           Fang Liu<br/>
           Advisor: Zhongchao Tan<br/><br/>
         </YearSection>
-
-
-
-
+        <Footer/>
       </div>
     );
   }

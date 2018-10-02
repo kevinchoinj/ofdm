@@ -3,12 +3,12 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as pagesActions from 'actions/pages';
 import KeynoteSection from 'past/KeynoteSection';
-
 import * as scrollActions from 'actions/scroll';
 import Scrollbar from 'smooth-scrollbar';
 import bannerImage from 'images/uwloo3.jpg';
 import Banner from 'home/Banner';
 import classNames from 'classnames';
+import Footer from 'components/Footer';
 
 class Keynotes extends React.Component{
 
@@ -75,6 +75,7 @@ class Keynotes extends React.Component{
             Finally, the high-amplitude pressure fluctuations within the turbulent boundary layer are investigated as the major acoustic source contributing to the trailing-edge noise. Three-dimensional measurement of the velocity field along with the evaluated pressure field demonstrated the correspondence of the positive and negative high-amplitude pressure peaks to the shear layers and vortical structures of the turbulent boundary layer, respectively. The results point out possible control strategies for trailing-edge noise attenuations.
           </KeynoteSection>
         </div>
+        <Footer/>
       </div>
     );
   }

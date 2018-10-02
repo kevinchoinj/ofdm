@@ -8,6 +8,7 @@ import image1 from 'images/4.png';
 import Banner from 'home/Banner';
 import bannerImage from 'images/uwloo2.jpg';
 import classNames from 'classnames';
+import Footer from 'components/Footer';
 
 class Home extends React.Component{
 
@@ -86,6 +87,7 @@ class Home extends React.Component{
           <img src={image1} className="home_image" alt="home"/>
         </div>
 
+        <Footer/>
       </div>
     );
   }

@@ -59,25 +59,25 @@
 }
 .section_button__line:nth-child(1) {
   width: 24px;
-  top: 29px;
+  top: 13px;
 }
 .section_button__line:nth-child(2) {
   width: 24px;
-  top: 38px;
+  top: 23px;
 }
 .section_button__line:nth-child(3) {
   width: 14px;
-  top: 47px;
+  top: 32px;
 }
 .section_button__container--displayed .section_button__line:nth-child(1) {
-  top: 34px;
+  top: 19px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .section_button__container--displayed .section_button__line:nth-child(2) {
-  top: 34px;
+  top: 19px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);

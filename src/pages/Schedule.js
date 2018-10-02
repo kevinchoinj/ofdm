@@ -7,6 +7,7 @@ import Scrollbar from 'smooth-scrollbar';
 import bannerImage from 'images/uwloo5.jpg';
 import Banner from 'home/Banner';
 import classNames from 'classnames';
+import Footer from 'components/Footer';
 
 class Schedule extends React.Component{
 	componentDidMount() {
@@ -38,6 +39,8 @@ class Schedule extends React.Component{
         >
           Schedule
         </Banner>
+
+        <Footer/>
       </div>
     );
   }
