@@ -4,7 +4,6 @@ export default class Footer extends React.Component{
     return(
       <div className="footer">
         <div className="footer_title">
-
         Contact for more information
         </div>
         <div>
